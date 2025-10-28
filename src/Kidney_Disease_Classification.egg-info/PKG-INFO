@@ -1,0 +1,18 @@
+Metadata-Version: 2.4
+Name: Kidney_Disease_Classification
+Version: 0.0.0
+Summary: A small python package for Kidney Disease Classification
+Home-page: https://github.com/gurnoor56/Kidney-Disease-Classification-Deep-Learning
+Author: gurnoor56
+Author-email: gurnoor2203@gmail.com
+Project-URL: Bug Tracker, https://github.com/gurnoor56/Kidney-Disease-Classification-Deep-Learning/issues
+Description-Content-Type: text/markdown
+Dynamic: author
+Dynamic: author-email
+Dynamic: description
+Dynamic: description-content-type
+Dynamic: home-page
+Dynamic: project-url
+Dynamic: summary
+
+# Kidney-disease-classification-with-mlflow-dvc

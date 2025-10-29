@@ -17,4 +17,4 @@ logging.basicConfig(
     ]
 )
 
-logger = logging.getLogger("Kidney_Disease_Classification")
+logger = logging.getLogger("KidneyClassification")

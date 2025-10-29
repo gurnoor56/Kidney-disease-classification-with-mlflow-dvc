@@ -5,9 +5,9 @@ with open("README.md", "r", encoding="utf-8") as f:
 
 __version__ = "0.0.0"
 
-REPO_NAME = "Kidney-Disease-Classification-Deep-Learning"
+REPO_NAME = "Kidney-disease-classification-with-mlflow-dvc"
 AUTHOR_USER_NAME = "gurnoor56"
-SRC_REPO = "Kidney_Disease_Classification"
+SRC_REPO = "KidneyClassification"
 AUTHOR_EMAIL = "gurnoor2203@gmail.com"
 
 setuptools.setup(

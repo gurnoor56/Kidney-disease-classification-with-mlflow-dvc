@@ -1,0 +1,56 @@
+Metadata-Version: 2.4
+Name: KidneyClassification
+Version: 0.0.0
+Summary: A small python package for Kidney Disease Classification
+Home-page: https://github.com/gurnoor56/Kidney-disease-classification-with-mlflow-dvc
+Author: gurnoor56
+Author-email: gurnoor2203@gmail.com
+Project-URL: Bug Tracker, https://github.com/gurnoor56/Kidney-disease-classification-with-mlflow-dvc/issues
+Description-Content-Type: text/markdown
+Dynamic: author
+Dynamic: author-email
+Dynamic: description
+Dynamic: description-content-type
+Dynamic: home-page
+Dynamic: project-url
+Dynamic: summary
+
+# Kidney-disease-classification-with-mlflow-dvc
+
+
+## WORKFLOWS
+
+1.Update cofig.yaml
+2.Update secrets.yaml[optional]
+3.Update params.yaml
+4.Update the entity
+5.Update the configuration manager in src config
+6.Update the components
+7.Update the pipeline
+8.Update the main.py
+9.Update the dvc.yaml
+10.app.py
+
+# how to run
+### STEPS:
+
+clone the repository
+
+```bash
+git clone https://github.com/gurnoor56/Kidney-disease-classification-with-mlflow-dvc.git
+```
+### STEP 01:Create a conda environment after opening the repository
+ 
+```bash
+conda create -n cnncls python=3.9 -y
+```
+
+```bash
+conda activate cnncls
+```
+
+
+### STEP 02:Install the Requirements
+```bash
+pip install -r requirements.txt
+```

@@ -23,13 +23,16 @@ class PrepareBaseModel:
 
     @staticmethod
     def _prepare_full_model(model, classes, freeze_all, freeze_till, learning_rate):
+        
+        # FIX 1: Unfreeze last 4 layers instead of freezing all
         if freeze_all:
             for layer in model.layers:
-                model.trainable = False
+                layer.trainable = False
         elif (freeze_till is not None) and (freeze_till > 0):
             for layer in model.layers[:-freeze_till]:
-                model.trainable = False
+                layer.trainable = False
 
+        #  FIX 2: Add top layers
         flatten_in = tf.keras.layers.Flatten()(model.output)
         prediction = tf.keras.layers.Dense(
             units=classes,
@@ -41,8 +44,9 @@ class PrepareBaseModel:
             outputs=prediction
         )
 
+        # FIX 3: Use ADAM instead of SGD (better accuracy)
         full_model.compile(
-            optimizer=tf.keras.optimizers.SGD(learning_rate=learning_rate),
+            optimizer=tf.keras.optimizers.Adam(learning_rate=learning_rate),
             loss=tf.keras.losses.CategoricalCrossentropy(),
             metrics=["accuracy"]
         )
@@ -50,20 +54,20 @@ class PrepareBaseModel:
         full_model.summary()
         return full_model
     
-    
     def update_base_model(self):
+
+        # FIX 4: Use freeze_all=False and freeze_till=4
         self.full_model = self._prepare_full_model(
             model=self.model,
             classes=self.config.params_classes,
-            freeze_all=True,
-            freeze_till=None,
+            freeze_all=False,      #Was True earlier → BAD
+            freeze_till=4,         # Unfreeze last 4 layers
             learning_rate=self.config.params_learning_rate
         )
 
         self.save_model(path=self.config.updated_base_model_path, model=self.full_model)
 
     
-        
     @staticmethod
     def save_model(path: Path, model: tf.keras.Model):
         model.save(path)

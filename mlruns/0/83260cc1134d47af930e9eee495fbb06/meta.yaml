@@ -1,0 +1,15 @@
+artifact_uri: file:///E:/Kidney%20project/Kidney-disease-classification-with-mlflow-dvc/mlruns/0/83260cc1134d47af930e9eee495fbb06/artifacts
+end_time: 1762716065662
+entry_point_name: ''
+experiment_id: '0'
+lifecycle_stage: active
+run_id: 83260cc1134d47af930e9eee495fbb06
+run_name: illustrious-cub-787
+run_uuid: 83260cc1134d47af930e9eee495fbb06
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1762716045716
+status: 3
+tags: []
+user_id: Asus

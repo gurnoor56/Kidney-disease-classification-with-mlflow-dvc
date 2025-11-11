@@ -70,3 +70,9 @@ set MLFLOW_TRACKING_USERNAME = gurnoor56
 set MLFLOW_TRACKING_PASSWORD = 26ed5d6606e6ca2401fee22c1f6245c29a4f805e 
 
 ```
+
+### DVC cmd
+
+1.dvc init
+2.dvc repro
+3.dvc dag

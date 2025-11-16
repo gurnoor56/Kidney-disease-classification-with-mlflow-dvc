@@ -91,7 +91,7 @@ class PredictionPipeline:
     def predict(self):
         """Predict Normal/Tumor + save heatmap + copy original image."""
         
-        model_path = "artifacts/training/model.h5"
+        model_path = "model/model.h5"
         model = load_model(model_path)
 
         # Preprocess

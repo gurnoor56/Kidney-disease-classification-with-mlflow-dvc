@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>NOOR AI — Heatmap Analysis</title>
+
+  <link rel="stylesheet"
+        href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+
+  <style>
+    :root {
+      --bg: #0a0f24;
+      --fg: #e0e6ff;
+      --card: rgba(255,255,255,0.05);
+      --border: rgba(255,255,255,0.1);
+      --accent1: #00b4d8;
+      --accent2: #5be9b9;
+    }
+
+    body {
+      background: radial-gradient(circle at top, var(--bg) 0%, #000 100%);
+      color: var(--fg);
+      font-family: 'Poppins', sans-serif;
+      padding: 20px;
+    }
+
+    h2 {
+      font-weight: 700;
+      background: linear-gradient(90deg, var(--accent2), var(--accent1));
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      text-align: center;
+      margin-bottom: 25px;
+    }
+
+    .main-card {
+      width: 95%;
+      margin: auto;
+      padding: 20px;
+      border-radius: 18px;
+      background: var(--card);
+      border: 1px solid var(--border);
+      backdrop-filter: blur(8px);
+    }
+
+    .dashboard {
+      display: flex;
+      justify-content: space-between;
+      gap: 20px;
+      flex-wrap: wrap;
+      margin-bottom: 25px;
+    }
+
+    .glass-panel {
+      flex: 1;
+      min-width: 330px;
+      padding: 15px;
+      border-radius: 14px;
+      text-align: center;
+      background: rgba(255,255,255,0.03);
+      border: 1px solid var(--border);
+    }
+
+    img.display-img {
+      width: 100%;
+      max-height: 480px;
+      object-fit: contain;
+      border-radius: 12px;
+      border: 1px solid var(--border);
+      background: black;
+    }
+
+    .summary-box {
+      padding: 18px;
+      border-radius: 16px;
+      text-align: center;
+      background: rgba(255,255,255,0.04);
+      border: 1px solid var(--border);
+      width: 80%;
+      margin: auto;
+    }
+
+    .confidence-container {
+      width: 90%;
+      margin: 20px auto;
+      background: rgba(255,255,255,0.08);
+      border-radius: 10px;
+      height: 20px;
+      overflow: hidden;
+    }
+
+    .confidence-bar {
+      height: 100%;
+      background: linear-gradient(90deg, #5be9b9, #00b4d8);
+      width: 0%;
+      transition: width 1.4s ease-in-out;
+    }
+
+    .performance-box {
+      margin-top: 25px;
+      padding: 18px;
+      border-radius: 16px;
+      background: rgba(255,255,255,0.03);
+      border: 1px solid var(--border);
+    }
+
+    .metric {
+      font-size: 16px;
+      padding: 8px 0;
+      border-bottom: 1px solid rgba(255,255,255,0.15);
+    }
+
+    .download-btn {
+      display: block;
+      width: 260px;
+      margin: 20px auto;
+      background: linear-gradient(90deg, #5be9b9, #00b4d8);
+      padding: 12px;
+      border-radius: 10px;
+      color: #000;
+      font-weight: 700;
+      text-align: center;
+      text-decoration: none;
+    }
+
+    .share-btn {
+      display: block;
+      width: 260px;
+      margin: 12px auto;
+      background: linear-gradient(90deg, #00b4d8, #5be9b9);
+      padding: 12px;
+      border-radius: 10px;
+      color: #000;
+      font-weight: 700;
+      text-align: center;
+      border: none;
+      cursor: pointer;
+      transition: 0.3s;
+    }
+
+    .share-btn:hover {
+      transform: scale(1.05);
+    }
+
+    .back-btn {
+      display: block;
+      width: 200px;
+      margin: 30px auto;
+      background: linear-gradient(90deg, var(--accent1), var(--accent2));
+      padding: 12px;
+      border-radius: 10px;
+      color: #000;
+      font-weight: 700;
+      text-align: center;
+      text-decoration: none;
+    }
+
+    .no-suspicious {
+      padding: 12px;
+      margin-bottom: 15px;
+      border-radius: 12px;
+      font-weight: 700;
+      background: rgba(0, 210, 138, 0.1);
+      border: 1px solid rgba(0, 210, 138, 0.3);
+      color: #00ffbf;
+    }
+
+    .noor-logo {
+      text-align: center;
+      margin-top: 15px;
+      color: var(--accent2);
+      font-weight: 700;
+      letter-spacing: 2px;
+    }
+  </style>
+</head>
+
+<body>
+
+<h2>🧠 NOOR AI — Heatmap Analysis</h2>
+
+<div class="main-card">
+
+  {% if data.prediction == "Normal" %}
+
+    <!-- NORMAL CASE — No heatmap / No Download -->
+    <div class="glass-panel" style="margin:auto; width:65%;">
+      <div class="no-suspicious">✔ No suspicious regions detected</div>
+
+      <h5>🖼 Original Image</h5>
+      <img class="display-img" src="/{{ data.original_image_path }}">
+
+      <div class="summary-box">
+        <h4>📊 Summary</h4>
+
+        <p><b>Prediction:</b> {{ data.prediction }}</p>
+        <p><b>Confidence:</b> {{ data.confidence }}</p>
+
+        <div class="confidence-container">
+          <div class="confidence-bar" id="confBar"></div>
+        </div>
+
+        <p style="margin-top:10px;color:#5be9b9;">
+          Heatmap is <b>not generated</b> because kidney appears <b>Normal</b>.
+        </p>
+      </div>
+    </div>
+
+  {% else %}
+
+    <!-- TUMOR CASE — Has Heatmap + Download + Share -->
+    <div class="dashboard">
+
+      <div class="glass-panel">
+        <h5>🖼 Original Image</h5>
+        <img class="display-img" src="/{{ data.original_image_path }}">
+      </div>
+
+      <div class="glass-panel">
+        <h5>🔥 Grad-CAM Heatmap</h5>
+        <img class="display-img" src="/{{ data.gradcam_path }}">
+      </div>
+
+    </div>
+
+    <!-- Download button only for Tumor -->
+    <a href="/{{ data.gradcam_path }}" download class="download-btn">
+      ⬇️ Download Heatmap
+    </a>
+
+    <!-- Share Button for Tumor -->
+    <button class="share-btn" onclick="shareHeatmap()">
+      🚀 Share Result
+    </button>
+
+    <div class="summary-box">
+      <h4>📊 Summary</h4>
+      <p><b>Prediction:</b> {{ data.prediction }}</p>
+      <p><b>Confidence:</b> {{ data.confidence }}</p>
+
+      <div class="confidence-container">
+        <div class="confidence-bar" id="confBar"></div>
+      </div>
+    </div>
+
+  {% endif %}
+
+
+  <!-- PERFORMANCE PANEL -->
+  <div class="performance-box">
+    <h4 class="text-center mb-3">📈 Model Performance</h4>
+
+    <div class="metric"><b>Accuracy:</b> {{ data.accuracy }}</div>
+    <div class="metric"><b>Loss:</b> {{ data.loss }}</div>
+    <div class="metric"><b>Precision:</b> {{ data.precision }}</div>
+    <div class="metric"><b>Recall:</b> {{ data.recall }}</div>
+    <div class="metric"><b>F1 Score:</b> {{ data.f1 }}</div>
+    <div class="metric"><b>Model Params:</b> {{ data.params }}</div>
+  </div>
+
+</div>
+
+<a href="/" class="back-btn">← Back to Prediction</a>
+
+<div class="noor-logo">NOOR AI</div>
+
+<script>
+  // Animate Confidence Bar (only when element exists)
+  const bar = document.getElementById("confBar");
+  if (bar) {
+      let conf = "{{ data.confidence }}".replace('%','');
+      conf = parseFloat(conf);
+      setTimeout(() => { bar.style.width = conf + "%"; }, 300);
+  }
+
+  // Share Button Logic
+  function shareHeatmap() {
+      const text =
+`🧠 NOOR AI — Tumor Detection
+Prediction: {{ data.prediction }}
+Confidence: {{ data.confidence }}
+Heatmap: ${window.location.origin}/{{ data.gradcam_path }}`;
+
+      if (navigator.share) {
+          navigator.share({
+              title: "NOOR AI Report",
+              text: text,
+              url: window.location.href
+          });
+      } else {
+          navigator.clipboard.writeText(text);
+          alert("📋 Copied to clipboard!");
+      }
+  }
+</script>
+
+</body>
+</html>

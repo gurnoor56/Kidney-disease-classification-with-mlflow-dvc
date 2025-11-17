@@ -2876,3 +2876,57 @@ jinja2.exceptions.TemplateNotFound: backup_ui.html
 [2025-11-16 23:37:48,341: INFO: _internal: 127.0.0.1 - - [16/Nov/2025 23:37:48] "GET /heatmap HTTP/1.1" 200 -]
 [2025-11-16 23:37:49,144: INFO: _internal: 127.0.0.1 - - [16/Nov/2025 23:37:49] "GET /static/gradcam_result.jpg HTTP/1.1" 200 -]
 [2025-11-16 23:37:49,145: INFO: _internal: 127.0.0.1 - - [16/Nov/2025 23:37:49] "GET /static/original.jpg HTTP/1.1" 200 -]
+[2025-11-17 23:07:53,628: INFO: _internal: [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:10000
+ * Running on http://10.234.91.165:10000]
+[2025-11-17 23:07:53,631: INFO: _internal: [33mPress CTRL+C to quit[0m]
+[2025-11-18 00:02:38,426: INFO: _internal: 127.0.0.1 - - [18/Nov/2025 00:02:38] "GET / HTTP/1.1" 200 -]
+[2025-11-18 00:02:38,560: INFO: _internal: 127.0.0.1 - - [18/Nov/2025 00:02:38] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -]
+[2025-11-18 00:02:51,412: WARNING: saving_utils: Compiled the loaded model, but the compiled metrics have yet to be built. `model.compile_metrics` will be empty until you train or evaluate the model.]
+[2025-11-18 00:02:53,697: INFO: _internal: 127.0.0.1 - - [18/Nov/2025 00:02:53] "POST /predict HTTP/1.1" 200 -]
+[2025-11-18 00:02:58,643: INFO: _internal: 127.0.0.1 - - [18/Nov/2025 00:02:58] "GET /static/gradcam_result.jpg HTTP/1.1" 200 -]
+[2025-11-18 00:03:14,921: WARNING: saving_utils: Compiled the loaded model, but the compiled metrics have yet to be built. `model.compile_metrics` will be empty until you train or evaluate the model.]
+[2025-11-18 00:03:16,720: INFO: _internal: 127.0.0.1 - - [18/Nov/2025 00:03:16] "POST /predict HTTP/1.1" 200 -]
+[2025-11-18 00:03:18,280: INFO: _internal: 127.0.0.1 - - [18/Nov/2025 00:03:18] "GET /heatmap HTTP/1.1" 200 -]
+[2025-11-18 00:03:18,353: INFO: _internal: 127.0.0.1 - - [18/Nov/2025 00:03:18] "GET /static/gradcam_result.jpg HTTP/1.1" 200 -]
+[2025-11-18 00:03:18,354: INFO: _internal: 127.0.0.1 - - [18/Nov/2025 00:03:18] "GET /static/original.jpg HTTP/1.1" 200 -]
+[2025-11-18 00:03:21,926: INFO: _internal: 127.0.0.1 - - [18/Nov/2025 00:03:21] "GET /static/gradcam_result.jpg HTTP/1.1" 200 -]
+[2025-11-18 00:04:35,848: INFO: _internal: 127.0.0.1 - - [18/Nov/2025 00:04:35] "GET / HTTP/1.1" 200 -]
+[2025-11-18 00:05:34,448: WARNING: saving_utils: Compiled the loaded model, but the compiled metrics have yet to be built. `model.compile_metrics` will be empty until you train or evaluate the model.]
+[2025-11-18 00:05:34,998: INFO: _internal: 127.0.0.1 - - [18/Nov/2025 00:05:34] "POST /predict HTTP/1.1" 200 -]
+[2025-11-18 00:05:37,147: INFO: _internal: 127.0.0.1 - - [18/Nov/2025 00:05:37] "GET /heatmap HTTP/1.1" 200 -]
+[2025-11-18 00:05:37,239: INFO: _internal: 127.0.0.1 - - [18/Nov/2025 00:05:37] "GET /static/original.jpg HTTP/1.1" 200 -]
+[2025-11-18 00:05:41,124: INFO: _internal: 127.0.0.1 - - [18/Nov/2025 00:05:41] "GET / HTTP/1.1" 200 -]
+[2025-11-18 00:05:48,455: WARNING: saving_utils: Compiled the loaded model, but the compiled metrics have yet to be built. `model.compile_metrics` will be empty until you train or evaluate the model.]
+[2025-11-18 00:05:49,496: INFO: _internal: 127.0.0.1 - - [18/Nov/2025 00:05:49] "POST /predict HTTP/1.1" 200 -]
+[2025-11-18 00:05:54,221: INFO: _internal: 127.0.0.1 - - [18/Nov/2025 00:05:54] "GET /heatmap HTTP/1.1" 200 -]
+[2025-11-18 00:05:54,282: INFO: _internal: 127.0.0.1 - - [18/Nov/2025 00:05:54] "GET /static/original.jpg HTTP/1.1" 200 -]
+[2025-11-18 00:05:56,773: INFO: _internal: 127.0.0.1 - - [18/Nov/2025 00:05:56] "GET / HTTP/1.1" 200 -]
+[2025-11-18 00:06:26,234: WARNING: saving_utils: Compiled the loaded model, but the compiled metrics have yet to be built. `model.compile_metrics` will be empty until you train or evaluate the model.]
+[2025-11-18 00:06:26,730: WARNING: polymorphic_function: 5 out of the last 7 calls to <function TensorFlowTrainer.make_predict_function.<locals>.one_step_on_data_distributed at 0x000001F09C2E4CA0> triggered tf.function retracing. Tracing is expensive and the excessive number of tracings could be due to (1) creating @tf.function repeatedly in a loop, (2) passing tensors with different shapes, (3) passing Python objects instead of tensors. For (1), please define your @tf.function outside of the loop. For (2), @tf.function has reduce_retracing=True option that can avoid unnecessary retracing. For (3), please refer to https://www.tensorflow.org/guide/function#controlling_retracing and https://www.tensorflow.org/api_docs/python/tf/function for  more details.]
+[2025-11-18 00:06:28,070: INFO: _internal: 127.0.0.1 - - [18/Nov/2025 00:06:28] "POST /predict HTTP/1.1" 200 -]
+[2025-11-18 00:06:29,828: INFO: _internal: 127.0.0.1 - - [18/Nov/2025 00:06:29] "GET /heatmap HTTP/1.1" 200 -]
+[2025-11-18 00:06:29,912: INFO: _internal: 127.0.0.1 - - [18/Nov/2025 00:06:29] "GET /static/original.jpg HTTP/1.1" 200 -]
+[2025-11-18 00:06:29,919: INFO: _internal: 127.0.0.1 - - [18/Nov/2025 00:06:29] "GET /static/gradcam_result.jpg HTTP/1.1" 200 -]
+[2025-11-18 00:06:33,970: INFO: _internal: 127.0.0.1 - - [18/Nov/2025 00:06:33] "GET /static/gradcam_result.jpg HTTP/1.1" 200 -]
+[2025-11-18 00:06:37,048: INFO: _internal: 127.0.0.1 - - [18/Nov/2025 00:06:37] "GET / HTTP/1.1" 200 -]
+[2025-11-18 00:23:22,893: INFO: _internal: [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:10000
+ * Running on http://10.234.91.165:10000]
+[2025-11-18 00:23:22,893: INFO: _internal: [33mPress CTRL+C to quit[0m]
+[2025-11-18 00:24:40,238: INFO: _internal: [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:10000
+ * Running on http://10.234.91.165:10000]
+[2025-11-18 00:24:40,238: INFO: _internal: [33mPress CTRL+C to quit[0m]
+[2025-11-18 00:29:22,711: INFO: _internal: [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:10000
+ * Running on http://10.234.91.165:10000]
+[2025-11-18 00:29:22,711: INFO: _internal: [33mPress CTRL+C to quit[0m]
+[2025-11-18 00:30:10,953: INFO: _internal: 127.0.0.1 - - [18/Nov/2025 00:30:10] "GET / HTTP/1.1" 200 -]
+[2025-11-18 00:30:11,032: INFO: _internal: 127.0.0.1 - - [18/Nov/2025 00:30:11] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -]
+[2025-11-18 00:30:56,300: INFO: _internal: 127.0.0.1 - - [18/Nov/2025 00:30:56] "GET / HTTP/1.1" 200 -]
+[2025-11-18 00:30:56,371: INFO: _internal: 127.0.0.1 - - [18/Nov/2025 00:30:56] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -]

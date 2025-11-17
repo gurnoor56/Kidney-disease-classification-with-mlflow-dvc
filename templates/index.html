@@ -18,34 +18,12 @@
   --accent2: #14ffec;
 }
 
-body.light {
-  --bg: #f4f6fb;
-  --fg: #1b1f3b;
-  --card: rgba(0,0,0,0.05);
-  --border: rgba(0,0,0,0.15);
-  --accent1: #0077b6;
-  --accent2: #00b894;
-}
-
 body {
   background: radial-gradient(circle at top, var(--bg), #000);
   color: var(--fg);
   font-family: 'Poppins', sans-serif;
   padding: 40px 10px;
   transition: 0.3s;
-}
-
-#modeBtn {
-  position: fixed;
-  right: 20px;
-  top: 20px;
-  padding: 8px 14px;
-  border-radius: 10px;
-  background: var(--card);
-  color: var(--fg);
-  border: 1px solid var(--border);
-  cursor: pointer;
-  z-index: 999;
 }
 
 .glass-panel {
@@ -88,8 +66,6 @@ body {
 
 <body>
 
-<button id="modeBtn">🌙 Dark Mode</button>
-
 <h3 class="text-center fw-bold mb-4"
     style="background: linear-gradient(90deg, var(--accent2), var(--accent1));
            -webkit-background-clip: text; -webkit-text-fill-color: transparent;">
@@ -102,13 +78,16 @@ body {
     <!-- LEFT PANEL = UPLOAD -->
     <div class="col-md-5 glass-panel me-md-3">
 
-      <h4 class="text-center mb-3">Upload Image</h4>
+      <h4 class="text-center mb-3">Upload / Capture</h4>
 
       <video id="video" autoplay width="100%" height="300"
              style="background:black; border-radius:12px;"></video>
 
       <img id="photo" class="display-img" style="display:none;">
       <canvas id="canvas" style="display:none;"></canvas>
+
+      <!-- Camera Switch -->
+      <button id="switchCamera" class="btn-main">🔄 Switch Camera</button>
 
       <div class="mt-3">
         <button id="uploadBtn" class="btn-main">📁 Upload</button>
@@ -139,11 +118,6 @@ body {
   </div>
 </div>
 
-<div class="text-center mt-4"
-     style="color:var(--accent2); font-weight:600; letter-spacing:2px;">
-  NOOR AI
-</div>
-
 <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 
 <script>
@@ -151,21 +125,24 @@ let base_data = "";
 let last_heatmap = "";
 let last_prediction = "";
 
-/* Dark/Light Mode */
-if (localStorage.getItem("mode") === "light") {
-    document.body.classList.add("light");
-    $("#modeBtn").text("🌙 Dark Mode");
+let video = document.getElementById("video");
+let currentFacingMode = "environment"; // BACK CAMERA
+
+function startCamera(facingMode) {
+    navigator.mediaDevices.getUserMedia({
+        video: { facingMode: facingMode }
+    })
+    .then(stream => { video.srcObject = stream; })
+    .catch(err => console.error(err));
 }
 
-$("#modeBtn").click(function () {
-    document.body.classList.toggle("light");
-    if (document.body.classList.contains("light")) {
-        $("#modeBtn").text("🌙 Dark Mode");
-        localStorage.setItem("mode", "light");
-    } else {
-        $("#modeBtn").text("☀️ Light Mode");
-        localStorage.setItem("mode", "dark");
-    }
+// Start with BACK camera
+startCamera(currentFacingMode);
+
+// Switch Camera Button
+document.getElementById("switchCamera").addEventListener("click", () => {
+    currentFacingMode = currentFacingMode === "environment" ? "user" : "environment";
+    startCamera(currentFacingMode);
 });
 
 /* Upload */
@@ -184,10 +161,7 @@ $("#fileinput").change(function () {
     reader.readAsDataURL(file);
 });
 
-/* Webcam */
-navigator.mediaDevices.getUserMedia({ video: true })
-  .then(stream => { video.srcObject = stream; });
-
+/* Capture */
 $("#captureBtn").click(function () {
   let canvas = document.createElement("canvas");
   canvas.width = video.videoWidth;
@@ -202,8 +176,7 @@ $("#captureBtn").click(function () {
 
 /* Predict */
 $("#predictBtn").click(function () {
-
-    if (!base_data) return alert("⚠ Upload an image first!");
+    if (!base_data) return alert("⚠ Upload or capture an image first!");
 
     $(".jsonRes").html("⏳ Processing...");
 
@@ -233,7 +206,6 @@ $("#predictBtn").click(function () {
 
             $("#heatmapBtn").click(() => window.location.href = "/heatmap");
 
-            /* OPTION B logic */
             $("#downloadBtn").off().click(() => {
                 if (last_prediction === "Normal") {
                     alert("⚠ Heatmap is not available for Normal images");

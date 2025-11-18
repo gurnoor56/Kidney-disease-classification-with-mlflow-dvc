@@ -2981,3 +2981,34 @@ jinja2.exceptions.TemplateNotFound: backup_ui.html
 [2025-11-18 00:59:32,558: INFO: _internal: 127.0.0.1 - - [18/Nov/2025 00:59:32] "GET /heatmap HTTP/1.1" 200 -]
 [2025-11-18 00:59:32,612: INFO: _internal: 127.0.0.1 - - [18/Nov/2025 00:59:32] "GET /static/original.jpg HTTP/1.1" 200 -]
 [2025-11-18 00:59:32,613: INFO: _internal: 127.0.0.1 - - [18/Nov/2025 00:59:32] "GET /static/gradcam_result.jpg HTTP/1.1" 200 -]
+[2025-11-18 23:16:05,578: INFO: _internal: [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:10000
+ * Running on http://10.234.91.165:10000]
+[2025-11-18 23:16:05,578: INFO: _internal: [33mPress CTRL+C to quit[0m]
+[2025-11-18 23:16:23,092: INFO: _internal: 127.0.0.1 - - [18/Nov/2025 23:16:23] "GET / HTTP/1.1" 200 -]
+[2025-11-18 23:16:23,166: INFO: _internal: 127.0.0.1 - - [18/Nov/2025 23:16:23] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -]
+[2025-11-18 23:16:56,943: WARNING: saving_utils: Compiled the loaded model, but the compiled metrics have yet to be built. `model.compile_metrics` will be empty until you train or evaluate the model.]
+[2025-11-18 23:16:58,911: INFO: _internal: 127.0.0.1 - - [18/Nov/2025 23:16:58] "POST /predict HTTP/1.1" 200 -]
+[2025-11-18 23:17:25,372: WARNING: saving_utils: Compiled the loaded model, but the compiled metrics have yet to be built. `model.compile_metrics` will be empty until you train or evaluate the model.]
+[2025-11-18 23:17:25,743: INFO: _internal: 127.0.0.1 - - [18/Nov/2025 23:17:25] "POST /predict HTTP/1.1" 200 -]
+[2025-11-18 23:22:50,944: INFO: _internal: [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:8080
+ * Running on http://10.234.91.165:8080]
+[2025-11-18 23:22:50,945: INFO: _internal: [33mPress CTRL+C to quit[0m]
+[2025-11-18 23:23:08,288: INFO: _internal: 127.0.0.1 - - [18/Nov/2025 23:23:08] "GET / HTTP/1.1" 200 -]
+[2025-11-18 23:23:08,361: INFO: _internal: 127.0.0.1 - - [18/Nov/2025 23:23:08] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -]
+[2025-11-18 23:23:26,152: WARNING: saving_utils: Compiled the loaded model, but the compiled metrics have yet to be built. `model.compile_metrics` will be empty until you train or evaluate the model.]
+[2025-11-18 23:23:26,573: INFO: _internal: 127.0.0.1 - - [18/Nov/2025 23:23:26] "POST /predict HTTP/1.1" 200 -]
+[2025-11-18 23:23:29,385: INFO: _internal: 127.0.0.1 - - [18/Nov/2025 23:23:29] "GET /heatmap HTTP/1.1" 200 -]
+[2025-11-18 23:23:29,795: INFO: _internal: 127.0.0.1 - - [18/Nov/2025 23:23:29] "GET /static/original.jpg HTTP/1.1" 200 -]
+[2025-11-18 23:23:44,214: INFO: _internal: 127.0.0.1 - - [18/Nov/2025 23:23:44] "GET / HTTP/1.1" 200 -]
+[2025-11-18 23:24:02,644: WARNING: saving_utils: Compiled the loaded model, but the compiled metrics have yet to be built. `model.compile_metrics` will be empty until you train or evaluate the model.]
+[2025-11-18 23:24:04,159: INFO: _internal: 127.0.0.1 - - [18/Nov/2025 23:24:04] "POST /predict HTTP/1.1" 200 -]
+[2025-11-18 23:24:06,304: INFO: _internal: 127.0.0.1 - - [18/Nov/2025 23:24:06] "GET /heatmap HTTP/1.1" 200 -]
+[2025-11-18 23:24:06,343: INFO: _internal: 127.0.0.1 - - [18/Nov/2025 23:24:06] "GET /static/original.jpg HTTP/1.1" 200 -]
+[2025-11-18 23:24:06,344: INFO: _internal: 127.0.0.1 - - [18/Nov/2025 23:24:06] "GET /static/gradcam_result.jpg HTTP/1.1" 200 -]
+[2025-11-18 23:24:24,679: INFO: _internal: 127.0.0.1 - - [18/Nov/2025 23:24:24] "GET /static/gradcam_result.jpg HTTP/1.1" 200 -]
+[2025-11-18 23:34:37,167: WARNING: saving_utils: Compiled the loaded model, but the compiled metrics have yet to be built. `model.compile_metrics` will be empty until you train or evaluate the model.]
+[2025-11-18 23:43:12,088: WARNING: saving_utils: Compiled the loaded model, but the compiled metrics have yet to be built. `model.compile_metrics` will be empty until you train or evaluate the model.]

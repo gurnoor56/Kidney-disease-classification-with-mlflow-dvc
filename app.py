@@ -4,14 +4,14 @@ from flask_cors import CORS
 from KidneyClassification.utils.common import decodeImage
 from KidneyClassification.pipeline.prediction import PredictionPipeline
 
+
 # ---------------------------------------------------
 # Flask App Setup
 # ---------------------------------------------------
 app = Flask(__name__)
 CORS(app)
 
-# Stores last prediction result to show in /heatmap
-latest_result = {}
+latest_result = {}   # Stores the last prediction for /heatmap page
 
 
 # ---------------------------------------------------
@@ -19,11 +19,10 @@ latest_result = {}
 # ---------------------------------------------------
 class ClientApp:
     def __init__(self):
-        self.filename = "inputImage.jpg"
+        self.filename = "inputImage.jpg"   # every new upload overwrites this
         self.classifier = PredictionPipeline(self.filename)
 
 
-# Create Client App Instance
 clApp = ClientApp()
 
 
@@ -33,30 +32,29 @@ clApp = ClientApp()
 
 @app.route("/", methods=["GET"])
 def home():
-    """Main UI page (index.html)"""
     return render_template("index.html")
 
 
 @app.route("/predict", methods=["POST"])
 def predictRoute():
-    """Receives uploaded image → runs model → returns JSON"""
+    """Receives Base64 image → Saves → Predicts → Returns JSON"""
     global latest_result
 
     try:
         print("\n🔍 Incoming /predict request")
 
-        # Read Base64 image sent from frontend
+        # Get base64 image from frontend
         image = request.json.get("image")
         if not image:
             return jsonify({"status": "error", "message": "No image received"})
 
-        # Decode and save image
+        # Decode and save image locally
         decodeImage(image, clApp.filename)
 
-        # Model Prediction
+        # Run prediction pipeline
         result = clApp.classifier.predict()[0]
 
-        # Build Output for heatmap page
+        # Store results for heatmap page
         latest_result = {
             "prediction": result["prediction"],
             "confidence": result["confidence"],
@@ -65,7 +63,7 @@ def predictRoute():
         }
 
         # -------------------------------------------------------
-        # ⭐ ADD MODEL PERFORMANCE METRICS (STATIC FOR DISPLAY)
+        # STATIC METRICS (SAFE — avoids MLflow errors)
         # -------------------------------------------------------
         latest_result.update({
             "accuracy": "98.2%",
@@ -85,47 +83,42 @@ def predictRoute():
         return jsonify({"status": "error", "message": str(e)})
 
 
-@app.route("/heatmap", methods=["GET"])
+@app.route("/heatmap")
 def heatmap_page():
-    """Displays original image + heatmap + summary"""
-    global latest_result
+    """Display heatmap + original image + metrics"""
 
     if not latest_result:
-        return render_template(
-            "heatmap.html",
-            data={
-                "error": "⚠️ No prediction yet!",
-                "prediction": None,
-                "confidence": None,
-                "gradcam_path": None,
-                "original_image_path": None,
-                "accuracy": None,
-                "loss": None,
-                "precision": None,
-                "recall": None,
-                "f1": None,
-                "params": None
-            }
-        )
+        # No prediction yet
+        return render_template("heatmap.html", data={
+            "error": "⚠️ No prediction yet!",
+            "prediction": None,
+            "confidence": None,
+            "gradcam_path": None,
+            "original_image_path": None,
+            "accuracy": None,
+            "loss": None,
+            "precision": None,
+            "recall": None,
+            "f1": None,
+            "params": None
+        })
 
-    # Render heatmap page with latest prediction data
     return render_template("heatmap.html", data=latest_result)
 
 
 @app.route("/static/<path:filename>")
 def serve_static(filename):
-    """Serve images from static folder"""
+    """Serve images such as heatmap + original image"""
     return send_from_directory("static", filename)
 
 
 @app.route("/debug")
 def debug():
-    """Debug route to confirm template path"""
     return "Templates Path: " + os.path.abspath("templates")
 
 
 # ---------------------------------------------------
-# MAIN APP RUN
+# Run APP
 # ---------------------------------------------------
 if __name__ == "__main__":
     print(r"""
@@ -138,5 +131,4 @@ if __name__ == "__main__":
 """)
 
     print("🌐 Running at: http://127.0.0.1:8080\n")
-    port = int(os.environ.get("PORT", 10000))
-    app.run(host="0.0.0.0", port=port)
+    app.run(host="0.0.0.0", port=8080)

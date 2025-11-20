@@ -131,5 +131,7 @@ if __name__ == "__main__":
 """)
 
     print("🌐 Running at: http://127.0.0.1:8080\n")
-    port = int(os.environ.get("PORT", 10000))
-    app.run(host="0.0.0.0", port=port) 
+    
+    # IMPORTANT FIX FOR RAILWAY
+    port = int(os.environ.get("PORT", 8080))
+    app.run(host="0.0.0.0", port=port)

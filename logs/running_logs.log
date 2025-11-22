@@ -3553,3 +3553,18 @@ jinja2.exceptions.UndefinedError: 'data' is undefined
 [2025-11-22 20:53:18,527: INFO: _internal: 127.0.0.1 - - [22/Nov/2025 20:53:18] "GET /static/original.jpg HTTP/1.1" 200 -]
 [2025-11-22 20:53:18,529: INFO: _internal: 127.0.0.1 - - [22/Nov/2025 20:53:18] "GET /static/gradcam_result.jpg HTTP/1.1" 200 -]
 [2025-11-22 20:53:26,101: INFO: _internal: 127.0.0.1 - - [22/Nov/2025 20:53:26] "GET /download_report HTTP/1.1" 200 -]
+[2025-11-22 21:39:39,172: WARNING: saving_utils: Compiled the loaded model, but the compiled metrics have yet to be built. `model.compile_metrics` will be empty until you train or evaluate the model.]
+[2025-11-22 21:39:39,208: INFO: _internal: [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:8080
+ * Running on http://10.234.91.165:8080]
+[2025-11-22 21:39:39,208: INFO: _internal: [33mPress CTRL+C to quit[0m]
+[2025-11-22 21:39:50,643: INFO: _internal: 127.0.0.1 - - [22/Nov/2025 21:39:50] "[32mGET / HTTP/1.1[0m" 302 -]
+[2025-11-22 21:39:50,657: INFO: _internal: 127.0.0.1 - - [22/Nov/2025 21:39:50] "GET /login HTTP/1.1" 200 -]
+[2025-11-22 21:39:50,741: INFO: _internal: 127.0.0.1 - - [22/Nov/2025 21:39:50] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -]
+[2025-11-22 21:39:56,550: INFO: _internal: 127.0.0.1 - - [22/Nov/2025 21:39:56] "[32mPOST /login HTTP/1.1[0m" 302 -]
+[2025-11-22 21:39:56,561: INFO: _internal: 127.0.0.1 - - [22/Nov/2025 21:39:56] "GET / HTTP/1.1" 200 -]
+[2025-11-22 21:40:09,709: INFO: _internal: 127.0.0.1 - - [22/Nov/2025 21:40:09] "POST /predict HTTP/1.1" 200 -]
+[2025-11-22 21:40:12,885: INFO: _internal: 127.0.0.1 - - [22/Nov/2025 21:40:12] "GET /heatmap HTTP/1.1" 200 -]
+[2025-11-22 21:40:13,286: INFO: _internal: 127.0.0.1 - - [22/Nov/2025 21:40:13] "GET /static/original.jpg HTTP/1.1" 200 -]
+[2025-11-22 21:40:32,169: INFO: _internal: 127.0.0.1 - - [22/Nov/2025 21:40:32] "GET / HTTP/1.1" 200 -]

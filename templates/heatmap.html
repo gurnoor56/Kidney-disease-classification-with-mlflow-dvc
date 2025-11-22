@@ -23,6 +23,22 @@
       color: var(--fg);
       font-family: 'Poppins', sans-serif;
       padding: 20px;
+      position: relative;
+    }
+
+    /* 🔥 NEW — Logout Button */
+    .logout-btn {
+      position: fixed;
+      bottom: 25px;
+      right: 25px;
+      background: linear-gradient(90deg, #ff5f5f, #ff8585);
+      padding: 12px 20px;
+      border-radius: 12px;
+      color: #000;
+      font-weight: 700;
+      text-decoration: none;
+      box-shadow: 0 0 12px rgba(255, 100, 100, 0.4);
+      z-index: 999;
     }
 
     h2 {
@@ -97,20 +113,6 @@
       transition: width 1.4s ease-in-out;
     }
 
-    .performance-box {
-      margin-top: 25px;
-      padding: 18px;
-      border-radius: 16px;
-      background: rgba(255,255,255,0.03);
-      border: 1px solid var(--border);
-    }
-
-    .metric {
-      font-size: 16px;
-      padding: 8px 0;
-      border-bottom: 1px solid rgba(255,255,255,0.15);
-    }
-
     .download-btn {
       display: block;
       width: 260px;
@@ -159,18 +161,13 @@
       border: 1px solid rgba(0, 210, 138, 0.3);
       color: #00ffbf;
     }
-
-    .noor-logo {
-      text-align: center;
-      margin-top: 15px;
-      color: var(--accent2);
-      font-weight: 700;
-      letter-spacing: 2px;
-    }
   </style>
 </head>
 
 <body>
+
+<!-- 🔥 LOGOUT BUTTON (Always Visible) -->
+<a href="/logout" class="logout-btn">Logout</a>
 
 <h2>🧠 NOOR AI — Heatmap Analysis</h2>
 
@@ -186,18 +183,18 @@
 
       <div class="summary-box">
         <h4>📊 Summary</h4>
-
         <p><b>Prediction:</b> {{ data.prediction }}</p>
         <p><b>Confidence:</b> {{ data.confidence }}</p>
 
         <div class="confidence-container">
           <div class="confidence-bar" id="confBar"></div>
         </div>
-
-        <p style="margin-top:10px;color:#5be9b9;">
-          Heatmap not generated because kidney appears <b>Normal</b>.
-        </p>
       </div>
+
+      <a href="/download_report" class="report-btn">
+        📄 Download Full Medical Report (PDF)
+      </a>
+
     </div>
 
   {% else %}
@@ -236,29 +233,16 @@
 
   {% endif %}
 
-  <div class="performance-box">
-    <h4 class="text-center mb-3">📈 Model Performance</h4>
-
-    <div class="metric"><b>Accuracy:</b> {{ data.accuracy }}</div>
-    <div class="metric"><b>Loss:</b> {{ data.loss }}</div>
-    <div class="metric"><b>Precision:</b> {{ data.precision }}</div>
-    <div class="metric"><b>Recall:</b> {{ data.recall }}</div>
-    <div class="metric"><b>F1 Score:</b> {{ data.f1 }}</div>
-    <div class="metric"><b>Model Params:</b> {{ data.params }}</div>
-  </div>
-
 </div>
 
 <a href="/" class="back-btn">← Back to Prediction</a>
-
-<div class="noor-logo">NOOR AI</div>
 
 <script>
   const bar = document.getElementById("confBar");
   if (bar) {
       let conf = "{{ data.confidence }}".replace('%','');
       conf = parseFloat(conf);
-      setTimeout(() => { bar.style.width = conf + "%"; }, 300);
+      bar.style.width = conf + "%";
   }
 </script>
 

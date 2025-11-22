@@ -3055,3 +3055,309 @@ jinja2.exceptions.TemplateNotFound: backup_ui.html
 [2025-11-20 00:46:36,018: INFO: _internal: 127.0.0.1 - - [20/Nov/2025 00:46:36] "GET /static/original.jpg HTTP/1.1" 200 -]
 [2025-11-20 00:46:36,020: INFO: _internal: 127.0.0.1 - - [20/Nov/2025 00:46:36] "GET /static/gradcam_result.jpg HTTP/1.1" 200 -]
 [2025-11-20 00:46:43,388: INFO: _internal: 127.0.0.1 - - [20/Nov/2025 00:46:43] "GET / HTTP/1.1" 200 -]
+[2025-11-21 23:39:19,422: INFO: _internal: [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:8080
+ * Running on http://10.234.91.165:8080]
+[2025-11-21 23:39:19,422: INFO: _internal: [33mPress CTRL+C to quit[0m]
+[2025-11-21 23:40:16,784: INFO: _internal: 127.0.0.1 - - [21/Nov/2025 23:40:16] "[32mGET / HTTP/1.1[0m" 302 -]
+[2025-11-21 23:40:16,793: INFO: _internal: 127.0.0.1 - - [21/Nov/2025 23:40:16] "GET /login?next=/ HTTP/1.1" 200 -]
+[2025-11-21 23:40:16,826: INFO: _internal: 127.0.0.1 - - [21/Nov/2025 23:40:16] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -]
+[2025-11-21 23:40:39,555: INFO: _internal: 127.0.0.1 - - [21/Nov/2025 23:40:39] "[32mPOST /login?next=/ HTTP/1.1[0m" 302 -]
+[2025-11-21 23:40:39,560: INFO: _internal: 127.0.0.1 - - [21/Nov/2025 23:40:39] "GET /login HTTP/1.1" 200 -]
+[2025-11-21 23:40:42,041: INFO: _internal: 127.0.0.1 - - [21/Nov/2025 23:40:42] "GET /register HTTP/1.1" 200 -]
+[2025-11-21 23:41:09,093: INFO: _internal: 127.0.0.1 - - [21/Nov/2025 23:41:09] "[32mPOST /register HTTP/1.1[0m" 302 -]
+[2025-11-21 23:41:09,098: INFO: _internal: 127.0.0.1 - - [21/Nov/2025 23:41:09] "GET /login HTTP/1.1" 200 -]
+[2025-11-21 23:41:31,581: INFO: _internal: 127.0.0.1 - - [21/Nov/2025 23:41:31] "[32mPOST /login HTTP/1.1[0m" 302 -]
+[2025-11-21 23:41:31,585: INFO: _internal: 127.0.0.1 - - [21/Nov/2025 23:41:31] "GET /login HTTP/1.1" 200 -]
+[2025-11-21 23:41:33,252: INFO: _internal: 127.0.0.1 - - [21/Nov/2025 23:41:33] "GET /register HTTP/1.1" 200 -]
+[2025-11-21 23:41:49,673: INFO: _internal: 127.0.0.1 - - [21/Nov/2025 23:41:49] "[32mPOST /register HTTP/1.1[0m" 302 -]
+[2025-11-21 23:41:49,678: INFO: _internal: 127.0.0.1 - - [21/Nov/2025 23:41:49] "GET /login HTTP/1.1" 200 -]
+[2025-11-21 23:41:57,634: INFO: _internal: 127.0.0.1 - - [21/Nov/2025 23:41:57] "[32mPOST /login HTTP/1.1[0m" 302 -]
+[2025-11-21 23:41:57,643: INFO: _internal: 127.0.0.1 - - [21/Nov/2025 23:41:57] "GET / HTTP/1.1" 200 -]
+[2025-11-21 23:50:30,656: INFO: _internal: [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:8080
+ * Running on http://10.234.91.165:8080]
+[2025-11-21 23:50:30,656: INFO: _internal: [33mPress CTRL+C to quit[0m]
+[2025-11-21 23:51:00,681: INFO: _internal: 127.0.0.1 - - [21/Nov/2025 23:51:00] "[32mGET / HTTP/1.1[0m" 302 -]
+[2025-11-21 23:51:00,692: INFO: _internal: 127.0.0.1 - - [21/Nov/2025 23:51:00] "GET /login?next=/ HTTP/1.1" 200 -]
+[2025-11-21 23:51:00,754: INFO: _internal: 127.0.0.1 - - [21/Nov/2025 23:51:00] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -]
+[2025-11-21 23:51:13,046: INFO: _internal: 127.0.0.1 - - [21/Nov/2025 23:51:13] "[32mPOST /login?next=/ HTTP/1.1[0m" 302 -]
+[2025-11-21 23:51:13,052: INFO: _internal: 127.0.0.1 - - [21/Nov/2025 23:51:13] "GET /login HTTP/1.1" 200 -]
+[2025-11-21 23:51:17,056: INFO: _internal: 127.0.0.1 - - [21/Nov/2025 23:51:17] "GET /register HTTP/1.1" 200 -]
+[2025-11-21 23:51:39,900: INFO: _internal: 127.0.0.1 - - [21/Nov/2025 23:51:39] "[32mPOST /register HTTP/1.1[0m" 302 -]
+[2025-11-21 23:51:39,904: INFO: _internal: 127.0.0.1 - - [21/Nov/2025 23:51:39] "GET /login HTTP/1.1" 200 -]
+[2025-11-21 23:51:54,708: INFO: _internal: 127.0.0.1 - - [21/Nov/2025 23:51:54] "[32mPOST /login HTTP/1.1[0m" 302 -]
+[2025-11-21 23:51:54,715: INFO: _internal: 127.0.0.1 - - [21/Nov/2025 23:51:54] "GET / HTTP/1.1" 200 -]
+[2025-11-22 00:03:27,522: INFO: _internal: [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:8080
+ * Running on http://10.234.91.165:8080]
+[2025-11-22 00:03:27,522: INFO: _internal: [33mPress CTRL+C to quit[0m]
+[2025-11-22 00:03:38,225: INFO: _internal: 127.0.0.1 - - [22/Nov/2025 00:03:38] "GET / HTTP/1.1" 200 -]
+[2025-11-22 00:03:46,346: INFO: _internal: 127.0.0.1 - - [22/Nov/2025 00:03:46] "GET / HTTP/1.1" 200 -]
+[2025-11-22 00:06:32,252: INFO: _internal: [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:8080
+ * Running on http://10.234.91.165:8080]
+[2025-11-22 00:06:32,252: INFO: _internal: [33mPress CTRL+C to quit[0m]
+[2025-11-22 00:08:10,072: INFO: _internal: 127.0.0.1 - - [22/Nov/2025 00:08:10] "[32mGET / HTTP/1.1[0m" 302 -]
+[2025-11-22 00:08:10,084: INFO: _internal: 127.0.0.1 - - [22/Nov/2025 00:08:10] "GET /login?next=/ HTTP/1.1" 200 -]
+[2025-11-22 00:08:10,126: INFO: _internal: 127.0.0.1 - - [22/Nov/2025 00:08:10] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -]
+[2025-11-22 00:08:19,801: INFO: _internal: 127.0.0.1 - - [22/Nov/2025 00:08:19] "[32mPOST /login?next=/ HTTP/1.1[0m" 302 -]
+[2025-11-22 00:08:19,809: INFO: _internal: 127.0.0.1 - - [22/Nov/2025 00:08:19] "GET /login HTTP/1.1" 200 -]
+[2025-11-22 00:08:20,903: INFO: _internal: 127.0.0.1 - - [22/Nov/2025 00:08:20] "[32mPOST /login HTTP/1.1[0m" 302 -]
+[2025-11-22 00:08:20,911: INFO: _internal: 127.0.0.1 - - [22/Nov/2025 00:08:20] "GET /login HTTP/1.1" 200 -]
+[2025-11-22 00:08:21,105: INFO: _internal: 127.0.0.1 - - [22/Nov/2025 00:08:21] "[32mPOST /login HTTP/1.1[0m" 302 -]
+[2025-11-22 00:08:21,108: INFO: _internal: 127.0.0.1 - - [22/Nov/2025 00:08:21] "GET /login HTTP/1.1" 200 -]
+[2025-11-22 00:08:22,085: INFO: _internal: 127.0.0.1 - - [22/Nov/2025 00:08:22] "GET /register HTTP/1.1" 200 -]
+[2025-11-22 13:25:44,013: INFO: _internal: [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:8080
+ * Running on http://10.234.91.165:8080]
+[2025-11-22 13:25:44,013: INFO: _internal: [33mPress CTRL+C to quit[0m]
+[2025-11-22 13:25:55,359: INFO: _internal: 127.0.0.1 - - [22/Nov/2025 13:25:55] "[32mGET / HTTP/1.1[0m" 302 -]
+[2025-11-22 13:25:55,376: INFO: _internal: 127.0.0.1 - - [22/Nov/2025 13:25:55] "GET /login?next=/ HTTP/1.1" 200 -]
+[2025-11-22 13:25:55,463: INFO: _internal: 127.0.0.1 - - [22/Nov/2025 13:25:55] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -]
+[2025-11-22 13:26:11,074: INFO: _internal: 127.0.0.1 - - [22/Nov/2025 13:26:11] "[32mPOST /login?next=/ HTTP/1.1[0m" 302 -]
+[2025-11-22 13:26:11,084: INFO: _internal: 127.0.0.1 - - [22/Nov/2025 13:26:11] "GET / HTTP/1.1" 200 -]
+[2025-11-22 13:26:30,753: WARNING: saving_utils: Compiled the loaded model, but the compiled metrics have yet to be built. `model.compile_metrics` will be empty until you train or evaluate the model.]
+[2025-11-22 13:26:32,909: INFO: _internal: 127.0.0.1 - - [22/Nov/2025 13:26:32] "POST /predict HTTP/1.1" 200 -]
+[2025-11-22 13:26:36,273: INFO: _internal: 127.0.0.1 - - [22/Nov/2025 13:26:36] "GET /heatmap HTTP/1.1" 200 -]
+[2025-11-22 13:26:36,975: INFO: _internal: 127.0.0.1 - - [22/Nov/2025 13:26:36] "GET /static/original.jpg HTTP/1.1" 200 -]
+[2025-11-22 13:26:36,975: INFO: _internal: 127.0.0.1 - - [22/Nov/2025 13:26:36] "GET /static/gradcam_result.jpg HTTP/1.1" 200 -]
+[2025-11-22 13:26:45,117: INFO: _internal: 127.0.0.1 - - [22/Nov/2025 13:26:45] "GET /static/gradcam_result.jpg HTTP/1.1" 200 -]
+[2025-11-22 13:31:43,700: INFO: _internal: [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:8080
+ * Running on http://10.234.91.165:8080]
+[2025-11-22 13:31:43,702: INFO: _internal: [33mPress CTRL+C to quit[0m]
+[2025-11-22 13:31:56,499: INFO: _internal: [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:8080
+ * Running on http://10.234.91.165:8080]
+[2025-11-22 13:31:56,499: INFO: _internal: [33mPress CTRL+C to quit[0m]
+[2025-11-22 13:32:09,488: INFO: _internal: 127.0.0.1 - - [22/Nov/2025 13:32:09] "GET / HTTP/1.1" 200 -]
+[2025-11-22 13:32:44,533: WARNING: saving_utils: Compiled the loaded model, but the compiled metrics have yet to be built. `model.compile_metrics` will be empty until you train or evaluate the model.]
+[2025-11-22 13:32:46,468: INFO: _internal: 127.0.0.1 - - [22/Nov/2025 13:32:46] "POST /predict HTTP/1.1" 200 -]
+[2025-11-22 13:32:48,951: INFO: _internal: 127.0.0.1 - - [22/Nov/2025 13:32:48] "GET /heatmap HTTP/1.1" 200 -]
+[2025-11-22 13:32:49,583: INFO: _internal: 127.0.0.1 - - [22/Nov/2025 13:32:49] "GET /static/original.jpg HTTP/1.1" 200 -]
+[2025-11-22 13:32:49,583: INFO: _internal: 127.0.0.1 - - [22/Nov/2025 13:32:49] "GET /static/gradcam_result.jpg HTTP/1.1" 200 -]
+[2025-11-22 13:33:03,955: INFO: _internal: 127.0.0.1 - - [22/Nov/2025 13:33:03] "GET /download_report HTTP/1.1" 200 -]
+[2025-11-22 13:33:58,771: INFO: _internal: 127.0.0.1 - - [22/Nov/2025 13:33:58] "GET / HTTP/1.1" 200 -]
+[2025-11-22 13:34:23,132: INFO: _internal: [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:8080
+ * Running on http://10.234.91.165:8080]
+[2025-11-22 13:34:23,132: INFO: _internal: [33mPress CTRL+C to quit[0m]
+[2025-11-22 13:42:53,429: INFO: _internal: [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:8080
+ * Running on http://10.234.91.165:8080]
+[2025-11-22 13:42:53,429: INFO: _internal: [33mPress CTRL+C to quit[0m]
+[2025-11-22 13:43:18,864: INFO: _internal: 127.0.0.1 - - [22/Nov/2025 13:43:18] "GET / HTTP/1.1" 200 -]
+[2025-11-22 13:43:27,886: INFO: _internal: 127.0.0.1 - - [22/Nov/2025 13:43:27] "GET / HTTP/1.1" 200 -]
+[2025-11-22 13:43:36,434: WARNING: saving_utils: Compiled the loaded model, but the compiled metrics have yet to be built. `model.compile_metrics` will be empty until you train or evaluate the model.]
+[2025-11-22 13:43:38,397: INFO: _internal: 127.0.0.1 - - [22/Nov/2025 13:43:38] "POST /predict HTTP/1.1" 200 -]
+[2025-11-22 13:43:40,531: INFO: _internal: 127.0.0.1 - - [22/Nov/2025 13:43:40] "GET /heatmap HTTP/1.1" 200 -]
+[2025-11-22 13:43:41,175: INFO: _internal: 127.0.0.1 - - [22/Nov/2025 13:43:41] "GET /static/gradcam_result.jpg HTTP/1.1" 200 -]
+[2025-11-22 13:43:41,175: INFO: _internal: 127.0.0.1 - - [22/Nov/2025 13:43:41] "GET /static/original.jpg HTTP/1.1" 200 -]
+[2025-11-22 13:43:45,935: INFO: _internal: 127.0.0.1 - - [22/Nov/2025 13:43:45] "GET /static/gradcam_result.jpg HTTP/1.1" 200 -]
+[2025-11-22 13:43:49,688: INFO: _internal: 127.0.0.1 - - [22/Nov/2025 13:43:49] "GET /download_report HTTP/1.1" 200 -]
+[2025-11-22 13:44:28,314: INFO: _internal: 127.0.0.1 - - [22/Nov/2025 13:44:28] "GET / HTTP/1.1" 200 -]
+[2025-11-22 14:00:47,915: INFO: _internal: [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:8080
+ * Running on http://10.234.91.165:8080]
+[2025-11-22 14:00:47,915: INFO: _internal: [33mPress CTRL+C to quit[0m]
+[2025-11-22 14:01:02,235: INFO: _internal: [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:8080
+ * Running on http://10.234.91.165:8080]
+[2025-11-22 14:01:02,235: INFO: _internal: [33mPress CTRL+C to quit[0m]
+[2025-11-22 14:01:16,619: INFO: _internal: 127.0.0.1 - - [22/Nov/2025 14:01:16] "[32mGET / HTTP/1.1[0m" 302 -]
+[2025-11-22 14:01:16,636: INFO: _internal: 127.0.0.1 - - [22/Nov/2025 14:01:16] "GET /login HTTP/1.1" 200 -]
+[2025-11-22 14:01:23,809: INFO: _internal: 127.0.0.1 - - [22/Nov/2025 14:01:23] "[32mPOST /login HTTP/1.1[0m" 302 -]
+[2025-11-22 14:01:23,820: INFO: _internal: 127.0.0.1 - - [22/Nov/2025 14:01:23] "GET / HTTP/1.1" 200 -]
+[2025-11-22 14:01:39,677: WARNING: saving_utils: Compiled the loaded model, but the compiled metrics have yet to be built. `model.compile_metrics` will be empty until you train or evaluate the model.]
+[2025-11-22 14:01:41,593: INFO: _internal: 127.0.0.1 - - [22/Nov/2025 14:01:41] "POST /predict HTTP/1.1" 200 -]
+[2025-11-22 14:01:43,371: INFO: _internal: 127.0.0.1 - - [22/Nov/2025 14:01:43] "GET /heatmap HTTP/1.1" 200 -]
+[2025-11-22 14:01:44,004: INFO: _internal: 127.0.0.1 - - [22/Nov/2025 14:01:44] "GET /static/original.jpg HTTP/1.1" 200 -]
+[2025-11-22 14:01:44,008: INFO: _internal: 127.0.0.1 - - [22/Nov/2025 14:01:44] "GET /static/gradcam_result.jpg HTTP/1.1" 200 -]
+[2025-11-22 14:01:47,326: INFO: _internal: 127.0.0.1 - - [22/Nov/2025 14:01:47] "GET /download_report HTTP/1.1" 200 -]
+[2025-11-22 14:02:06,898: INFO: _internal: 127.0.0.1 - - [22/Nov/2025 14:02:06] "GET / HTTP/1.1" 200 -]
+[2025-11-22 14:08:42,981: INFO: _internal: [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:8080
+ * Running on http://10.234.91.165:8080]
+[2025-11-22 14:08:42,981: INFO: _internal: [33mPress CTRL+C to quit[0m]
+[2025-11-22 14:08:53,933: INFO: _internal: 127.0.0.1 - - [22/Nov/2025 14:08:53] "GET / HTTP/1.1" 200 -]
+[2025-11-22 14:09:02,065: INFO: _internal: 127.0.0.1 - - [22/Nov/2025 14:09:02] "GET / HTTP/1.1" 200 -]
+[2025-11-22 14:10:29,441: INFO: _internal: [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:8080
+ * Running on http://10.234.91.165:8080]
+[2025-11-22 14:10:29,441: INFO: _internal: [33mPress CTRL+C to quit[0m]
+[2025-11-22 14:11:17,681: INFO: _internal: 127.0.0.1 - - [22/Nov/2025 14:11:17] "GET / HTTP/1.1" 200 -]
+[2025-11-22 14:11:28,949: WARNING: saving_utils: Compiled the loaded model, but the compiled metrics have yet to be built. `model.compile_metrics` will be empty until you train or evaluate the model.]
+[2025-11-22 14:11:30,833: INFO: _internal: 127.0.0.1 - - [22/Nov/2025 14:11:30] "POST /predict HTTP/1.1" 200 -]
+[2025-11-22 14:11:33,076: INFO: _internal: 127.0.0.1 - - [22/Nov/2025 14:11:33] "GET /heatmap HTTP/1.1" 200 -]
+[2025-11-22 14:11:33,690: INFO: _internal: 127.0.0.1 - - [22/Nov/2025 14:11:33] "GET /static/original.jpg HTTP/1.1" 200 -]
+[2025-11-22 14:11:33,690: INFO: _internal: 127.0.0.1 - - [22/Nov/2025 14:11:33] "GET /static/gradcam_result.jpg HTTP/1.1" 200 -]
+[2025-11-22 14:11:40,314: INFO: _internal: 127.0.0.1 - - [22/Nov/2025 14:11:40] "GET / HTTP/1.1" 200 -]
+[2025-11-22 14:20:17,114: INFO: _internal: [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:8080
+ * Running on http://10.234.91.165:8080]
+[2025-11-22 14:20:17,114: INFO: _internal: [33mPress CTRL+C to quit[0m]
+[2025-11-22 14:21:26,929: INFO: _internal: 127.0.0.1 - - [22/Nov/2025 14:21:26] "GET / HTTP/1.1" 200 -]
+[2025-11-22 14:21:38,371: WARNING: saving_utils: Compiled the loaded model, but the compiled metrics have yet to be built. `model.compile_metrics` will be empty until you train or evaluate the model.]
+[2025-11-22 14:21:40,224: INFO: _internal: 127.0.0.1 - - [22/Nov/2025 14:21:40] "POST /predict HTTP/1.1" 200 -]
+[2025-11-22 14:21:42,312: INFO: _internal: 127.0.0.1 - - [22/Nov/2025 14:21:42] "GET /heatmap HTTP/1.1" 200 -]
+[2025-11-22 14:21:42,951: INFO: _internal: 127.0.0.1 - - [22/Nov/2025 14:21:42] "GET /static/original.jpg HTTP/1.1" 200 -]
+[2025-11-22 14:21:42,951: INFO: _internal: 127.0.0.1 - - [22/Nov/2025 14:21:42] "GET /static/gradcam_result.jpg HTTP/1.1" 200 -]
+[2025-11-22 14:21:50,741: INFO: _internal: 127.0.0.1 - - [22/Nov/2025 14:21:50] "[32mGET /logout HTTP/1.1[0m" 302 -]
+[2025-11-22 14:21:50,754: INFO: _internal: 127.0.0.1 - - [22/Nov/2025 14:21:50] "GET /login HTTP/1.1" 200 -]
+[2025-11-22 14:22:19,139: ERROR: app: Exception on /register [GET]]
+Traceback (most recent call last):
+  File "E:\New folder\envs\kidney\lib\site-packages\flask\app.py", line 2190, in wsgi_app
+    response = self.full_dispatch_request()
+  File "E:\New folder\envs\kidney\lib\site-packages\flask\app.py", line 1486, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "E:\New folder\envs\kidney\lib\site-packages\flask_cors\extension.py", line 176, in wrapped_function
+    return cors_after_request(app.make_response(f(*args, **kwargs)))
+  File "E:\New folder\envs\kidney\lib\site-packages\flask\app.py", line 1484, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "E:\New folder\envs\kidney\lib\site-packages\flask\app.py", line 1469, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+  File "E:\Kidney project\Kidney-disease-classification-with-mlflow-dvc\app.py", line 117, in register
+    return render_template("register.html")
+  File "E:\New folder\envs\kidney\lib\site-packages\flask\templating.py", line 151, in render_template
+    return _render(app, template, context)
+  File "E:\New folder\envs\kidney\lib\site-packages\flask\templating.py", line 132, in _render
+    rv = template.render(context)
+  File "E:\New folder\envs\kidney\lib\site-packages\jinja2\environment.py", line 1295, in render
+    self.environment.handle_exception()
+  File "E:\New folder\envs\kidney\lib\site-packages\jinja2\environment.py", line 942, in handle_exception
+    raise rewrite_traceback_stack(source=source)
+  File "E:\Kidney project\Kidney-disease-classification-with-mlflow-dvc\templates\register.html", line 138, in top-level template code
+    {% if data.prediction == "Normal" %}
+  File "E:\New folder\envs\kidney\lib\site-packages\jinja2\environment.py", line 490, in getattr
+    return getattr(obj, attribute)
+jinja2.exceptions.UndefinedError: 'data' is undefined
+[2025-11-22 14:22:19,149: INFO: _internal: 127.0.0.1 - - [22/Nov/2025 14:22:19] "[35m[1mGET /register HTTP/1.1[0m" 500 -]
+[2025-11-22 14:22:29,062: INFO: _internal: 127.0.0.1 - - [22/Nov/2025 14:22:29] "[32mGET / HTTP/1.1[0m" 302 -]
+[2025-11-22 14:22:29,073: INFO: _internal: 127.0.0.1 - - [22/Nov/2025 14:22:29] "GET /login HTTP/1.1" 200 -]
+[2025-11-22 14:22:44,100: INFO: _internal: 127.0.0.1 - - [22/Nov/2025 14:22:44] "[32mPOST /login HTTP/1.1[0m" 302 -]
+[2025-11-22 14:22:44,110: INFO: _internal: 127.0.0.1 - - [22/Nov/2025 14:22:44] "GET / HTTP/1.1" 200 -]
+[2025-11-22 14:23:04,050: INFO: _internal: [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:8080
+ * Running on http://10.234.91.165:8080]
+[2025-11-22 14:23:04,050: INFO: _internal: [33mPress CTRL+C to quit[0m]
+[2025-11-22 14:23:18,182: INFO: _internal: 127.0.0.1 - - [22/Nov/2025 14:23:18] "GET / HTTP/1.1" 200 -]
+[2025-11-22 14:23:52,857: WARNING: saving_utils: Compiled the loaded model, but the compiled metrics have yet to be built. `model.compile_metrics` will be empty until you train or evaluate the model.]
+[2025-11-22 14:23:54,766: INFO: _internal: 127.0.0.1 - - [22/Nov/2025 14:23:54] "POST /predict HTTP/1.1" 200 -]
+[2025-11-22 14:23:56,757: INFO: _internal: 127.0.0.1 - - [22/Nov/2025 14:23:56] "GET /heatmap HTTP/1.1" 200 -]
+[2025-11-22 14:23:57,382: INFO: _internal: 127.0.0.1 - - [22/Nov/2025 14:23:57] "GET /static/original.jpg HTTP/1.1" 200 -]
+[2025-11-22 14:23:57,382: INFO: _internal: 127.0.0.1 - - [22/Nov/2025 14:23:57] "GET /static/gradcam_result.jpg HTTP/1.1" 200 -]
+[2025-11-22 14:24:03,674: INFO: _internal: 127.0.0.1 - - [22/Nov/2025 14:24:03] "GET / HTTP/1.1" 200 -]
+[2025-11-22 14:24:20,917: WARNING: saving_utils: Compiled the loaded model, but the compiled metrics have yet to be built. `model.compile_metrics` will be empty until you train or evaluate the model.]
+[2025-11-22 14:24:22,651: INFO: _internal: 127.0.0.1 - - [22/Nov/2025 14:24:22] "POST /predict HTTP/1.1" 200 -]
+[2025-11-22 14:24:24,328: INFO: _internal: 127.0.0.1 - - [22/Nov/2025 14:24:24] "GET /heatmap HTTP/1.1" 200 -]
+[2025-11-22 14:24:24,373: INFO: _internal: 127.0.0.1 - - [22/Nov/2025 14:24:24] "GET /static/original.jpg HTTP/1.1" 200 -]
+[2025-11-22 14:24:24,379: INFO: _internal: 127.0.0.1 - - [22/Nov/2025 14:24:24] "GET /static/gradcam_result.jpg HTTP/1.1" 200 -]
+[2025-11-22 14:24:34,294: INFO: _internal: 127.0.0.1 - - [22/Nov/2025 14:24:34] "GET / HTTP/1.1" 200 -]
+[2025-11-22 14:24:52,258: WARNING: saving_utils: Compiled the loaded model, but the compiled metrics have yet to be built. `model.compile_metrics` will be empty until you train or evaluate the model.]
+[2025-11-22 14:24:52,763: INFO: _internal: 127.0.0.1 - - [22/Nov/2025 14:24:52] "POST /predict HTTP/1.1" 200 -]
+[2025-11-22 14:24:55,960: INFO: _internal: 127.0.0.1 - - [22/Nov/2025 14:24:55] "GET /heatmap HTTP/1.1" 200 -]
+[2025-11-22 14:24:55,999: INFO: _internal: 127.0.0.1 - - [22/Nov/2025 14:24:55] "GET /static/original.jpg HTTP/1.1" 200 -]
+[2025-11-22 14:25:11,806: INFO: _internal: 127.0.0.1 - - [22/Nov/2025 14:25:11] "[32mGET /logout HTTP/1.1[0m" 302 -]
+[2025-11-22 14:25:11,818: INFO: _internal: 127.0.0.1 - - [22/Nov/2025 14:25:11] "GET /login HTTP/1.1" 200 -]
+[2025-11-22 14:25:14,248: ERROR: app: Exception on /register [GET]]
+Traceback (most recent call last):
+  File "E:\New folder\envs\kidney\lib\site-packages\flask\app.py", line 2190, in wsgi_app
+    response = self.full_dispatch_request()
+  File "E:\New folder\envs\kidney\lib\site-packages\flask\app.py", line 1486, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "E:\New folder\envs\kidney\lib\site-packages\flask_cors\extension.py", line 176, in wrapped_function
+    return cors_after_request(app.make_response(f(*args, **kwargs)))
+  File "E:\New folder\envs\kidney\lib\site-packages\flask\app.py", line 1484, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "E:\New folder\envs\kidney\lib\site-packages\flask\app.py", line 1469, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+  File "E:\Kidney project\Kidney-disease-classification-with-mlflow-dvc\app.py", line 117, in register
+    return render_template("register.html")
+  File "E:\New folder\envs\kidney\lib\site-packages\flask\templating.py", line 151, in render_template
+    return _render(app, template, context)
+  File "E:\New folder\envs\kidney\lib\site-packages\flask\templating.py", line 132, in _render
+    rv = template.render(context)
+  File "E:\New folder\envs\kidney\lib\site-packages\jinja2\environment.py", line 1295, in render
+    self.environment.handle_exception()
+  File "E:\New folder\envs\kidney\lib\site-packages\jinja2\environment.py", line 942, in handle_exception
+    raise rewrite_traceback_stack(source=source)
+  File "E:\Kidney project\Kidney-disease-classification-with-mlflow-dvc\templates\register.html", line 138, in top-level template code
+    {% if data.prediction == "Normal" %}
+  File "E:\New folder\envs\kidney\lib\site-packages\jinja2\environment.py", line 490, in getattr
+    return getattr(obj, attribute)
+jinja2.exceptions.UndefinedError: 'data' is undefined
+[2025-11-22 14:25:14,252: INFO: _internal: 127.0.0.1 - - [22/Nov/2025 14:25:14] "[35m[1mGET /register HTTP/1.1[0m" 500 -]
+[2025-11-22 14:30:57,789: INFO: _internal: 127.0.0.1 - - [22/Nov/2025 14:30:57] "[33mGET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1[0m" 404 -]
+[2025-11-22 14:33:45,215: INFO: _internal: 127.0.0.1 - - [22/Nov/2025 14:33:45] "[33mGET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1[0m" 404 -]
+[2025-11-22 14:33:45,252: INFO: _internal: 127.0.0.1 - - [22/Nov/2025 14:33:45] "[33mGET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1[0m" 404 -]
+[2025-11-22 15:26:08,566: INFO: _internal: [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:8080
+ * Running on http://10.234.91.165:8080]
+[2025-11-22 15:26:08,566: INFO: _internal: [33mPress CTRL+C to quit[0m]
+[2025-11-22 15:27:32,518: INFO: _internal: 127.0.0.1 - - [22/Nov/2025 15:27:32] "[32mGET / HTTP/1.1[0m" 302 -]
+[2025-11-22 15:27:32,534: INFO: _internal: 127.0.0.1 - - [22/Nov/2025 15:27:32] "GET /login HTTP/1.1" 200 -]
+[2025-11-22 15:27:45,946: INFO: _internal: 127.0.0.1 - - [22/Nov/2025 15:27:45] "[32mPOST /login HTTP/1.1[0m" 302 -]
+[2025-11-22 15:27:45,952: INFO: _internal: 127.0.0.1 - - [22/Nov/2025 15:27:45] "GET /login HTTP/1.1" 200 -]
+[2025-11-22 15:27:48,390: INFO: _internal: 127.0.0.1 - - [22/Nov/2025 15:27:48] "GET /register HTTP/1.1" 200 -]
+[2025-11-22 15:28:33,695: INFO: _internal: 127.0.0.1 - - [22/Nov/2025 15:28:33] "[32mPOST /register HTTP/1.1[0m" 302 -]
+[2025-11-22 15:28:33,703: INFO: _internal: 127.0.0.1 - - [22/Nov/2025 15:28:33] "GET /login HTTP/1.1" 200 -]
+[2025-11-22 15:28:41,762: INFO: _internal: 127.0.0.1 - - [22/Nov/2025 15:28:41] "[32mPOST /login HTTP/1.1[0m" 302 -]
+[2025-11-22 15:28:41,770: INFO: _internal: 127.0.0.1 - - [22/Nov/2025 15:28:41] "GET / HTTP/1.1" 200 -]
+[2025-11-22 15:28:57,766: WARNING: saving_utils: Compiled the loaded model, but the compiled metrics have yet to be built. `model.compile_metrics` will be empty until you train or evaluate the model.]
+[2025-11-22 15:28:58,358: INFO: _internal: 127.0.0.1 - - [22/Nov/2025 15:28:58] "POST /predict HTTP/1.1" 200 -]
+[2025-11-22 15:29:00,799: INFO: _internal: 127.0.0.1 - - [22/Nov/2025 15:29:00] "GET /heatmap HTTP/1.1" 200 -]
+[2025-11-22 15:29:01,266: INFO: _internal: 127.0.0.1 - - [22/Nov/2025 15:29:01] "GET /static/original.jpg HTTP/1.1" 200 -]
+[2025-11-22 15:29:04,847: INFO: _internal: 127.0.0.1 - - [22/Nov/2025 15:29:04] "GET /download_report HTTP/1.1" 200 -]
+[2025-11-22 15:29:17,698: INFO: _internal: 127.0.0.1 - - [22/Nov/2025 15:29:17] "GET / HTTP/1.1" 200 -]
+[2025-11-22 15:29:34,244: WARNING: saving_utils: Compiled the loaded model, but the compiled metrics have yet to be built. `model.compile_metrics` will be empty until you train or evaluate the model.]
+[2025-11-22 15:29:35,061: INFO: _internal: 127.0.0.1 - - [22/Nov/2025 15:29:35] "POST /predict HTTP/1.1" 200 -]
+[2025-11-22 15:29:51,751: WARNING: saving_utils: Compiled the loaded model, but the compiled metrics have yet to be built. `model.compile_metrics` will be empty until you train or evaluate the model.]
+[2025-11-22 15:29:53,543: INFO: _internal: 127.0.0.1 - - [22/Nov/2025 15:29:53] "POST /predict HTTP/1.1" 200 -]
+[2025-11-22 15:29:59,799: WARNING: saving_utils: Compiled the loaded model, but the compiled metrics have yet to be built. `model.compile_metrics` will be empty until you train or evaluate the model.]
+[2025-11-22 15:30:01,548: INFO: _internal: 127.0.0.1 - - [22/Nov/2025 15:30:01] "POST /predict HTTP/1.1" 200 -]
+[2025-11-22 15:30:02,345: INFO: _internal: 127.0.0.1 - - [22/Nov/2025 15:30:02] "GET /heatmap HTTP/1.1" 200 -]
+[2025-11-22 15:30:02,362: INFO: _internal: 127.0.0.1 - - [22/Nov/2025 15:30:02] "GET /heatmap HTTP/1.1" 200 -]
+[2025-11-22 15:30:02,411: INFO: _internal: 127.0.0.1 - - [22/Nov/2025 15:30:02] "GET /static/original.jpg HTTP/1.1" 200 -]
+[2025-11-22 15:30:02,417: INFO: _internal: 127.0.0.1 - - [22/Nov/2025 15:30:02] "GET /static/gradcam_result.jpg HTTP/1.1" 200 -]
+[2025-11-22 15:30:05,615: INFO: _internal: 127.0.0.1 - - [22/Nov/2025 15:30:05] "GET /static/gradcam_result.jpg HTTP/1.1" 200 -]
+[2025-11-22 15:30:07,435: INFO: _internal: 127.0.0.1 - - [22/Nov/2025 15:30:07] "GET /download_report HTTP/1.1" 200 -]
+[2025-11-22 15:36:20,459: INFO: _internal: [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:8080
+ * Running on http://10.234.91.165:8080]
+[2025-11-22 15:36:20,459: INFO: _internal: [33mPress CTRL+C to quit[0m]
+[2025-11-22 15:37:01,756: INFO: _internal: 127.0.0.1 - - [22/Nov/2025 15:37:01] "GET / HTTP/1.1" 200 -]
+[2025-11-22 15:37:11,954: INFO: _internal: 127.0.0.1 - - [22/Nov/2025 15:37:11] "GET / HTTP/1.1" 200 -]
+[2025-11-22 15:37:25,725: INFO: _internal: 127.0.0.1 - - [22/Nov/2025 15:37:25] "GET / HTTP/1.1" 200 -]
+[2025-11-22 15:37:36,649: WARNING: saving_utils: Compiled the loaded model, but the compiled metrics have yet to be built. `model.compile_metrics` will be empty until you train or evaluate the model.]
+[2025-11-22 15:37:38,686: INFO: _internal: 127.0.0.1 - - [22/Nov/2025 15:37:38] "POST /predict HTTP/1.1" 200 -]
+[2025-11-22 15:37:40,579: INFO: _internal: 127.0.0.1 - - [22/Nov/2025 15:37:40] "GET /heatmap HTTP/1.1" 200 -]
+[2025-11-22 15:37:41,228: INFO: _internal: 127.0.0.1 - - [22/Nov/2025 15:37:41] "GET /static/original.jpg HTTP/1.1" 200 -]
+[2025-11-22 15:37:41,228: INFO: _internal: 127.0.0.1 - - [22/Nov/2025 15:37:41] "GET /static/gradcam_result.jpg HTTP/1.1" 200 -]
+[2025-11-22 15:37:48,064: INFO: _internal: 127.0.0.1 - - [22/Nov/2025 15:37:48] "[32mGET /logout HTTP/1.1[0m" 302 -]
+[2025-11-22 15:37:48,080: INFO: _internal: 127.0.0.1 - - [22/Nov/2025 15:37:48] "GET /login HTTP/1.1" 200 -]
+[2025-11-22 15:37:49,804: INFO: _internal: 127.0.0.1 - - [22/Nov/2025 15:37:49] "GET /register HTTP/1.1" 200 -]
+[2025-11-22 15:37:57,323: INFO: _internal: 127.0.0.1 - - [22/Nov/2025 15:37:57] "GET /login HTTP/1.1" 200 -]
+[2025-11-22 15:37:59,092: INFO: _internal: 127.0.0.1 - - [22/Nov/2025 15:37:59] "GET /register HTTP/1.1" 200 -]
+[2025-11-22 15:38:41,848: INFO: _internal: 127.0.0.1 - - [22/Nov/2025 15:38:41] "[32mGET / HTTP/1.1[0m" 302 -]
+[2025-11-22 15:38:41,859: INFO: _internal: 127.0.0.1 - - [22/Nov/2025 15:38:41] "GET /login HTTP/1.1" 200 -]
+[2025-11-22 15:38:51,114: INFO: _internal: 127.0.0.1 - - [22/Nov/2025 15:38:51] "[32mPOST /login HTTP/1.1[0m" 302 -]
+[2025-11-22 15:38:51,121: INFO: _internal: 127.0.0.1 - - [22/Nov/2025 15:38:51] "GET /login HTTP/1.1" 200 -]
+[2025-11-22 15:38:53,283: INFO: _internal: 127.0.0.1 - - [22/Nov/2025 15:38:53] "GET /register HTTP/1.1" 200 -]

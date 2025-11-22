@@ -1,0 +1,6 @@
+{
+  "admin": {
+    "password": "<hashed-password-will-auto-generate>",
+    "display_name": "Administrator"
+  }
+}

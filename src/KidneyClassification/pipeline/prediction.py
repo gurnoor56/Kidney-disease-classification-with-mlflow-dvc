@@ -86,7 +86,7 @@ class PredictionPipeline:
 
 
     # ------------------------------------------------------------
-    # 🔍 PREDICTION + AUTO-HANDLING NORMAL/TUMOR
+    # 🔍 PREDICTION + AUTO-HANDLING NORMAL/TUMOR + REPORT DATA
     # ------------------------------------------------------------
     def predict(self):
         """Predict Normal/Tumor + save heatmap + copy original image."""
@@ -121,10 +121,25 @@ class PredictionPipeline:
         if prediction == "Tumor":
             gradcam_path = self.generate_gradcam(model)
 
+        # --------------------------------------------------------
+        # 📝 NEW: Report Data (for PDF / HTML / User Info)
+        # --------------------------------------------------------
+        report_data = {
+            "prediction": prediction,
+            "confidence": f"{confidence:.2f}%",
+            "note": "Possible abnormality detected." if prediction == "Tumor" else "No suspicious signs detected.",
+            "recommendation": 
+                "Consult a radiologist for further evaluation." if prediction == "Tumor" 
+                else "Routine monitoring recommended.",
+        }
+
         # Final output
         return [{
             "prediction": prediction,
             "confidence": f"{confidence:.2f}%",
             "gradcam_path": gradcam_path,
-            "original_image_path": "static/original.jpg"
+            "original_image_path": "static/original.jpg",
+
+            # NEW
+            "report": report_data
         }]

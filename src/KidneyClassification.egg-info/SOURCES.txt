@@ -7,6 +7,8 @@ src/KidneyClassification.egg-info/dependency_links.txt
 src/KidneyClassification.egg-info/top_level.txt
 src/KidneyClassification/components/__init__.py
 src/KidneyClassification/components/data_ingestion.py
+src/KidneyClassification/components/model_evaluation_mlflow.py
+src/KidneyClassification/components/model_training.py
 src/KidneyClassification/components/prepare_base_model.py
 src/KidneyClassification/config/__init__.py
 src/KidneyClassification/config/configuration.py
@@ -14,7 +16,11 @@ src/KidneyClassification/constants/__init__.py
 src/KidneyClassification/entity/__init__.py
 src/KidneyClassification/entity/config_entity.py
 src/KidneyClassification/pipeline/__init__.py
+src/KidneyClassification/pipeline/prediction.py
 src/KidneyClassification/pipeline/stage01_data_ingestion.py
 src/KidneyClassification/pipeline/stage_02_prepare_base_model.py
+src/KidneyClassification/pipeline/stage_03_model_training.py
+src/KidneyClassification/pipeline/stage_04_model_evaluation.py
 src/KidneyClassification/utils/__init__.py
 src/KidneyClassification/utils/common.py
+src/KidneyClassification/utils/read_metrics.py

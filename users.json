@@ -1,0 +1,26 @@
+{
+  "admin": {
+    "password": "scrypt:32768:8:1$Rv9kc4FMRPsP1OAL$a12e3f87d90266a95ab350429a0e189ff2c83766e59d3243a4e6ddd7afdc6f1972fccde1e8de63ee53ea0be8f149ab7ba3e3210ce690f62b20671b2e1e2376c6",
+    "display_name": "Administrator"
+  },
+  "noor93": {
+    "password": "scrypt:32768:8:1$dVkvd2XicDmq64a6$4b38bfa789fb36c6f03f89a29359106d1cc67d59515f57e5efd613c3280c612f16214b3fa622e587684b1e806936c185883fdbcadacb42d2af1184413a5d02c2",
+    "display_name": "Gurnoor"
+  },
+  "noor": {
+    "password": "scrypt:32768:8:1$0M1K2QovTg2dkLZr$74e1ae38c4de6f2e589faf7171e06c7fa6d301667fe45f26020f941980218ded2fe0740e494a2d203acc5ac9e037e9894ac8d5851f87ebdc7da637029d407fb6",
+    "display_name": "gurnoor"
+  },
+  "Noor": {
+    "password": "scrypt:32768:8:1$BzwEq3aMjGcreDco$658f22ef371491d9a7f62fae3b3e390d317a4808482cf4d4922ce2eb9b210aac1039b915cf6a1ba73cb24f1c5922a8625b8e0d0cb924348331173613f93f24d0",
+    "display_name": "Gurnoor"
+  },
+  "coc": {
+    "password": "scrypt:32768:8:1$4VwepsQwYkvzOLWb$e2a0b5ddb9d83b5b341779152165cdc90e45cfc53a13d8e21716626fd093872c548e1158d1040baa1e31b38138d33c1bf426601033d4cf9e0620071e9ddff9f2",
+    "display_name": "clashofclans"
+  },
+  "noor1": {
+    "password": "scrypt:32768:8:1$PDGRnuqrOZaIUV3u$5ed5ac423ba65ec2e8a9cf57f534215dc31033a69eb6ac5693840d6c733c5582d5461d2485eb3d87b1cd47d92cba4f773c804f3c16ebd69dd52e7b00e936fa88",
+    "display_name": "Gurnoor"
+  }
+}

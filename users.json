@@ -22,5 +22,17 @@
   "noor1": {
     "password": "scrypt:32768:8:1$PDGRnuqrOZaIUV3u$5ed5ac423ba65ec2e8a9cf57f534215dc31033a69eb6ac5693840d6c733c5582d5461d2485eb3d87b1cd47d92cba4f773c804f3c16ebd69dd52e7b00e936fa88",
     "display_name": "Gurnoor"
+  },
+  "noor111": {
+    "password": "scrypt:32768:8:1$8tZkw1PWJkl5w1rh$45ea9aef88d9c9c4d5dc9a936007e6dc9bd7131a816968e58a761fa4cc8a7e3c94a2b21dc37aa470ae81b32efc16d44df92e179558cc74894e17cc556a9d3dc5",
+    "display_name": "gurnoor"
+  },
+  "noor122": {
+    "password": "scrypt:32768:8:1$CN56StoeImfAbL6T$ad4ddb07c48aca4e0506732cb50f4c6f2c18600c74a0918a20adc48098c2c11fe8d41b187c039e8ce2a460a556d8eb781c3b881956ae4f732c407b27532591db",
+    "display_name": "Gurnoor"
+  },
+  "gurnoor": {
+    "password": "scrypt:32768:8:1$Mo02fBeiv3dTn76f$33f49927a3c7d446ef2eb98d8ff19da64162a073d073277da36c4f9face607b040a9249bab359ab28e4a32fa653d2871371c9f53e59182ab9afdf3fbc7623ad3",
+    "display_name": "gurnoor"
   }
 }

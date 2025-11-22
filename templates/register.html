@@ -55,7 +55,7 @@
       font-weight: bold;
     }
 
-    /* Eye button inside input box */
+    /* Eye icon inside input */
     .password-wrapper {
       position: relative;
     }
@@ -78,7 +78,7 @@
 
   <h2>Create Account</h2>
 
-  <!-- FLASH MESSAGES -->
+  <!-- Flask flash messages -->
   {% with messages = get_flashed_messages(with_categories=true) %}
     {% if messages %}
       {% for category, message in messages %}
@@ -89,18 +89,18 @@
     {% endif %}
   {% endwith %}
 
-  <!-- JS validation error -->
+  <!-- JS Validation Box -->
   <div id="errorBox" class="error-message"></div>
 
   <form method="POST" onsubmit="return validateForm()">
 
     <label>Display Name</label>
-    <input type="text" name="display_name" class="form-control mb-3"
-           placeholder="Your name..." required />
+    <input type="text" id="display_name" name="display_name"
+           class="form-control mb-3" placeholder="Your name..." required />
 
     <label>Username</label>
-    <input type="text" name="username" class="form-control mb-3"
-           placeholder="Choose a username" required />
+    <input type="text" id="username" name="username"
+           class="form-control mb-3" placeholder="Choose a username" required />
 
     <label>Password</label>
     <div class="password-wrapper mb-3">
@@ -126,6 +126,7 @@
 </div>
 
 <script>
+/* Show / Hide Password */
 function togglePassword(fieldId, iconElement) {
     const input = document.getElementById(fieldId);
     if (input.type === "password") {
@@ -137,14 +138,25 @@ function togglePassword(fieldId, iconElement) {
     }
 }
 
+/* Validation Logic */
 function validateForm() {
+    const displayName = document.getElementById("display_name").value.trim().toLowerCase();
+    const username = document.getElementById("username").value.trim().toLowerCase();
     const pass = document.getElementById("password").value;
     const conf = document.getElementById("confirm_password").value;
+
     let error = "";
 
     if (pass.length < 4) {
         error = "Password must be at least 4 characters.";
-    } else if (pass !== conf) {
+    }
+    else if (pass.toLowerCase() === username) {
+        error = "Password must not match username.";
+    }
+    else if (pass.toLowerCase() === displayName) {
+        error = "Password must not match display name.";
+    }
+    else if (pass !== conf) {
         error = "Passwords do not match.";
     }
 
@@ -152,6 +164,7 @@ function validateForm() {
         document.getElementById("errorBox").innerText = error;
         return false;
     }
+
     return true;
 }
 </script>

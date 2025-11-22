@@ -3385,3 +3385,152 @@ jinja2.exceptions.UndefinedError: 'data' is undefined
 [2025-11-22 15:46:59,308: INFO: _internal: 127.0.0.1 - - [22/Nov/2025 15:46:59] "GET /static/gradcam_result.jpg HTTP/1.1" 200 -]
 [2025-11-22 15:47:02,196: INFO: _internal: 127.0.0.1 - - [22/Nov/2025 15:47:02] "GET /static/gradcam_result.jpg HTTP/1.1" 200 -]
 [2025-11-22 15:47:05,411: INFO: _internal: 127.0.0.1 - - [22/Nov/2025 15:47:05] "GET /download_report HTTP/1.1" 200 -]
+[2025-11-22 18:12:00,920: INFO: _internal: [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:8080
+ * Running on http://10.234.91.165:8080]
+[2025-11-22 18:12:00,920: INFO: _internal: [33mPress CTRL+C to quit[0m]
+[2025-11-22 18:12:29,493: INFO: _internal: 127.0.0.1 - - [22/Nov/2025 18:12:29] "[32mGET / HTTP/1.1[0m" 302 -]
+[2025-11-22 18:12:29,507: INFO: _internal: 127.0.0.1 - - [22/Nov/2025 18:12:29] "GET /login HTTP/1.1" 200 -]
+[2025-11-22 18:12:29,561: INFO: _internal: 127.0.0.1 - - [22/Nov/2025 18:12:29] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -]
+[2025-11-22 18:12:49,540: INFO: _internal: 127.0.0.1 - - [22/Nov/2025 18:12:49] "[32mPOST /login HTTP/1.1[0m" 302 -]
+[2025-11-22 18:12:49,544: INFO: _internal: 127.0.0.1 - - [22/Nov/2025 18:12:49] "GET /login HTTP/1.1" 200 -]
+[2025-11-22 18:12:51,645: INFO: _internal: 127.0.0.1 - - [22/Nov/2025 18:12:51] "GET /register HTTP/1.1" 200 -]
+[2025-11-22 18:12:55,251: INFO: _internal: 127.0.0.1 - - [22/Nov/2025 18:12:55] "GET /login HTTP/1.1" 200 -]
+[2025-11-22 18:13:03,331: INFO: _internal: 127.0.0.1 - - [22/Nov/2025 18:13:03] "[32mPOST /login HTTP/1.1[0m" 302 -]
+[2025-11-22 18:13:03,348: ERROR: app: Exception on / [GET]]
+Traceback (most recent call last):
+  File "E:\New folder\envs\kidney\lib\site-packages\flask\app.py", line 2190, in wsgi_app
+    response = self.full_dispatch_request()
+  File "E:\New folder\envs\kidney\lib\site-packages\flask\app.py", line 1486, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "E:\New folder\envs\kidney\lib\site-packages\flask_cors\extension.py", line 176, in wrapped_function
+    return cors_after_request(app.make_response(f(*args, **kwargs)))
+  File "E:\New folder\envs\kidney\lib\site-packages\flask\app.py", line 1484, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "E:\New folder\envs\kidney\lib\site-packages\flask\app.py", line 1469, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+  File "E:\Kidney project\Kidney-disease-classification-with-mlflow-dvc\app.py", line 74, in decorated
+    return f(*args, **kwargs)
+  File "E:\Kidney project\Kidney-disease-classification-with-mlflow-dvc\app.py", line 149, in home
+    return render_template("index.html")
+  File "E:\New folder\envs\kidney\lib\site-packages\flask\templating.py", line 151, in render_template
+    return _render(app, template, context)
+  File "E:\New folder\envs\kidney\lib\site-packages\flask\templating.py", line 132, in _render
+    rv = template.render(context)
+  File "E:\New folder\envs\kidney\lib\site-packages\jinja2\environment.py", line 1295, in render
+    self.environment.handle_exception()
+  File "E:\New folder\envs\kidney\lib\site-packages\jinja2\environment.py", line 942, in handle_exception
+    raise rewrite_traceback_stack(source=source)
+  File "E:\Kidney project\Kidney-disease-classification-with-mlflow-dvc\templates\index.html", line 179, in top-level template code
+    {% if data.prediction == "Normal" %}
+  File "E:\New folder\envs\kidney\lib\site-packages\jinja2\environment.py", line 490, in getattr
+    return getattr(obj, attribute)
+jinja2.exceptions.UndefinedError: 'data' is undefined
+[2025-11-22 18:13:03,354: INFO: _internal: 127.0.0.1 - - [22/Nov/2025 18:13:03] "[35m[1mGET / HTTP/1.1[0m" 500 -]
+[2025-11-22 18:13:12,689: INFO: _internal: 127.0.0.1 - - [22/Nov/2025 18:13:12] "GET /register HTTP/1.1" 200 -]
+[2025-11-22 18:13:35,066: INFO: _internal: 127.0.0.1 - - [22/Nov/2025 18:13:35] "[32mPOST /register HTTP/1.1[0m" 302 -]
+[2025-11-22 18:13:35,069: INFO: _internal: 127.0.0.1 - - [22/Nov/2025 18:13:35] "GET /login HTTP/1.1" 200 -]
+[2025-11-22 18:13:47,647: INFO: _internal: 127.0.0.1 - - [22/Nov/2025 18:13:47] "[32mPOST /login HTTP/1.1[0m" 302 -]
+[2025-11-22 18:13:47,656: ERROR: app: Exception on / [GET]]
+Traceback (most recent call last):
+  File "E:\New folder\envs\kidney\lib\site-packages\flask\app.py", line 2190, in wsgi_app
+    response = self.full_dispatch_request()
+  File "E:\New folder\envs\kidney\lib\site-packages\flask\app.py", line 1486, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "E:\New folder\envs\kidney\lib\site-packages\flask_cors\extension.py", line 176, in wrapped_function
+    return cors_after_request(app.make_response(f(*args, **kwargs)))
+  File "E:\New folder\envs\kidney\lib\site-packages\flask\app.py", line 1484, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "E:\New folder\envs\kidney\lib\site-packages\flask\app.py", line 1469, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+  File "E:\Kidney project\Kidney-disease-classification-with-mlflow-dvc\app.py", line 74, in decorated
+    return f(*args, **kwargs)
+  File "E:\Kidney project\Kidney-disease-classification-with-mlflow-dvc\app.py", line 149, in home
+    return render_template("index.html")
+  File "E:\New folder\envs\kidney\lib\site-packages\flask\templating.py", line 151, in render_template
+    return _render(app, template, context)
+  File "E:\New folder\envs\kidney\lib\site-packages\flask\templating.py", line 132, in _render
+    rv = template.render(context)
+  File "E:\New folder\envs\kidney\lib\site-packages\jinja2\environment.py", line 1295, in render
+    self.environment.handle_exception()
+  File "E:\New folder\envs\kidney\lib\site-packages\jinja2\environment.py", line 942, in handle_exception
+    raise rewrite_traceback_stack(source=source)
+  File "E:\Kidney project\Kidney-disease-classification-with-mlflow-dvc\templates\index.html", line 179, in top-level template code
+    {% if data.prediction == "Normal" %}
+  File "E:\New folder\envs\kidney\lib\site-packages\jinja2\environment.py", line 490, in getattr
+    return getattr(obj, attribute)
+jinja2.exceptions.UndefinedError: 'data' is undefined
+[2025-11-22 18:13:47,658: INFO: _internal: 127.0.0.1 - - [22/Nov/2025 18:13:47] "[35m[1mGET / HTTP/1.1[0m" 500 -]
+[2025-11-22 18:13:55,148: INFO: _internal: 127.0.0.1 - - [22/Nov/2025 18:13:55] "[33mGET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1[0m" 404 -]
+[2025-11-22 20:27:15,342: INFO: _internal: [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:8080
+ * Running on http://10.234.91.165:8080]
+[2025-11-22 20:27:15,342: INFO: _internal: [33mPress CTRL+C to quit[0m]
+[2025-11-22 20:28:12,362: INFO: _internal: 127.0.0.1 - - [22/Nov/2025 20:28:12] "[32mGET / HTTP/1.1[0m" 302 -]
+[2025-11-22 20:28:12,379: INFO: _internal: 127.0.0.1 - - [22/Nov/2025 20:28:12] "GET /login HTTP/1.1" 200 -]
+[2025-11-22 20:28:12,461: INFO: _internal: 127.0.0.1 - - [22/Nov/2025 20:28:12] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -]
+[2025-11-22 20:28:31,452: INFO: _internal: 127.0.0.1 - - [22/Nov/2025 20:28:31] "[32mPOST /login HTTP/1.1[0m" 302 -]
+[2025-11-22 20:28:31,461: INFO: _internal: 127.0.0.1 - - [22/Nov/2025 20:28:31] "GET / HTTP/1.1" 200 -]
+[2025-11-22 20:28:53,677: INFO: _internal: 127.0.0.1 - - [22/Nov/2025 20:28:53] "GET / HTTP/1.1" 200 -]
+[2025-11-22 20:29:11,675: WARNING: saving_utils: Compiled the loaded model, but the compiled metrics have yet to be built. `model.compile_metrics` will be empty until you train or evaluate the model.]
+[2025-11-22 20:29:13,820: INFO: _internal: 127.0.0.1 - - [22/Nov/2025 20:29:13] "POST /predict HTTP/1.1" 200 -]
+[2025-11-22 20:29:16,299: INFO: _internal: 127.0.0.1 - - [22/Nov/2025 20:29:16] "GET /heatmap HTTP/1.1" 200 -]
+[2025-11-22 20:29:16,944: INFO: _internal: 127.0.0.1 - - [22/Nov/2025 20:29:16] "GET /static/gradcam_result.jpg HTTP/1.1" 200 -]
+[2025-11-22 20:29:16,944: INFO: _internal: 127.0.0.1 - - [22/Nov/2025 20:29:16] "GET /static/original.jpg HTTP/1.1" 200 -]
+[2025-11-22 20:29:19,717: INFO: _internal: 127.0.0.1 - - [22/Nov/2025 20:29:19] "GET /download_report HTTP/1.1" 200 -]
+[2025-11-22 20:29:21,818: INFO: _internal: 127.0.0.1 - - [22/Nov/2025 20:29:21] "GET /static/gradcam_result.jpg HTTP/1.1" 200 -]
+[2025-11-22 20:29:25,619: INFO: _internal: 127.0.0.1 - - [22/Nov/2025 20:29:25] "GET / HTTP/1.1" 200 -]
+[2025-11-22 20:29:40,275: WARNING: saving_utils: Compiled the loaded model, but the compiled metrics have yet to be built. `model.compile_metrics` will be empty until you train or evaluate the model.]
+[2025-11-22 20:29:40,781: INFO: _internal: 127.0.0.1 - - [22/Nov/2025 20:29:40] "POST /predict HTTP/1.1" 200 -]
+[2025-11-22 20:29:42,909: INFO: _internal: 127.0.0.1 - - [22/Nov/2025 20:29:42] "GET /heatmap HTTP/1.1" 200 -]
+[2025-11-22 20:29:42,977: INFO: _internal: 127.0.0.1 - - [22/Nov/2025 20:29:42] "GET /static/original.jpg HTTP/1.1" 200 -]
+[2025-11-22 20:29:47,826: INFO: _internal: 127.0.0.1 - - [22/Nov/2025 20:29:47] "GET /download_report HTTP/1.1" 200 -]
+[2025-11-22 20:29:52,891: INFO: _internal: 127.0.0.1 - - [22/Nov/2025 20:29:52] "[32mGET / HTTP/1.1[0m" 302 -]
+[2025-11-22 20:29:52,924: INFO: _internal: 127.0.0.1 - - [22/Nov/2025 20:29:52] "GET /login HTTP/1.1" 200 -]
+[2025-11-22 20:29:53,779: INFO: _internal: 127.0.0.1 - - [22/Nov/2025 20:29:53] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -]
+[2025-11-22 20:30:14,121: INFO: _internal: 127.0.0.1 - - [22/Nov/2025 20:30:14] "GET / HTTP/1.1" 200 -]
+[2025-11-22 20:30:27,274: WARNING: saving_utils: Compiled the loaded model, but the compiled metrics have yet to be built. `model.compile_metrics` will be empty until you train or evaluate the model.]
+[2025-11-22 20:30:27,733: INFO: _internal: 127.0.0.1 - - [22/Nov/2025 20:30:27] "POST /predict HTTP/1.1" 200 -]
+[2025-11-22 20:30:33,316: INFO: _internal: 127.0.0.1 - - [22/Nov/2025 20:30:33] "GET /heatmap HTTP/1.1" 200 -]
+[2025-11-22 20:30:33,360: INFO: _internal: 127.0.0.1 - - [22/Nov/2025 20:30:33] "GET /static/original.jpg HTTP/1.1" 200 -]
+[2025-11-22 20:30:36,240: INFO: _internal: 127.0.0.1 - - [22/Nov/2025 20:30:36] "[32mGET /logout HTTP/1.1[0m" 302 -]
+[2025-11-22 20:30:36,246: INFO: _internal: 127.0.0.1 - - [22/Nov/2025 20:30:36] "GET /login HTTP/1.1" 200 -]
+[2025-11-22 20:30:43,958: INFO: _internal: 127.0.0.1 - - [22/Nov/2025 20:30:43] "[32mPOST /login HTTP/1.1[0m" 302 -]
+[2025-11-22 20:30:43,965: INFO: _internal: 127.0.0.1 - - [22/Nov/2025 20:30:43] "GET / HTTP/1.1" 200 -]
+[2025-11-22 20:30:59,018: WARNING: saving_utils: Compiled the loaded model, but the compiled metrics have yet to be built. `model.compile_metrics` will be empty until you train or evaluate the model.]
+[2025-11-22 20:30:59,531: INFO: _internal: 127.0.0.1 - - [22/Nov/2025 20:30:59] "POST /predict HTTP/1.1" 200 -]
+[2025-11-22 20:31:00,675: WARNING: saving_utils: Compiled the loaded model, but the compiled metrics have yet to be built. `model.compile_metrics` will be empty until you train or evaluate the model.]
+[2025-11-22 20:31:01,229: WARNING: polymorphic_function: 5 out of the last 6 calls to <function TensorFlowTrainer.make_predict_function.<locals>.one_step_on_data_distributed at 0x000001608409C0D0> triggered tf.function retracing. Tracing is expensive and the excessive number of tracings could be due to (1) creating @tf.function repeatedly in a loop, (2) passing tensors with different shapes, (3) passing Python objects instead of tensors. For (1), please define your @tf.function outside of the loop. For (2), @tf.function has reduce_retracing=True option that can avoid unnecessary retracing. For (3), please refer to https://www.tensorflow.org/guide/function#controlling_retracing and https://www.tensorflow.org/api_docs/python/tf/function for  more details.]
+[2025-11-22 20:31:01,273: INFO: _internal: 127.0.0.1 - - [22/Nov/2025 20:31:01] "POST /predict HTTP/1.1" 200 -]
+[2025-11-22 20:31:03,036: INFO: _internal: 127.0.0.1 - - [22/Nov/2025 20:31:03] "GET /heatmap HTTP/1.1" 200 -]
+[2025-11-22 20:31:03,041: INFO: _internal: 127.0.0.1 - - [22/Nov/2025 20:31:03] "GET /heatmap HTTP/1.1" 200 -]
+[2025-11-22 20:31:03,092: INFO: _internal: 127.0.0.1 - - [22/Nov/2025 20:31:03] "GET /static/original.jpg HTTP/1.1" 200 -]
+[2025-11-22 20:31:04,495: INFO: _internal: 127.0.0.1 - - [22/Nov/2025 20:31:04] "[32mGET /logout HTTP/1.1[0m" 302 -]
+[2025-11-22 20:31:04,504: INFO: _internal: 127.0.0.1 - - [22/Nov/2025 20:31:04] "GET /login HTTP/1.1" 200 -]
+[2025-11-22 20:31:06,137: INFO: _internal: 127.0.0.1 - - [22/Nov/2025 20:31:06] "GET /register HTTP/1.1" 200 -]
+[2025-11-22 20:31:42,312: INFO: _internal: 127.0.0.1 - - [22/Nov/2025 20:31:42] "[32mPOST /register HTTP/1.1[0m" 302 -]
+[2025-11-22 20:31:42,319: INFO: _internal: 127.0.0.1 - - [22/Nov/2025 20:31:42] "GET /register HTTP/1.1" 200 -]
+[2025-11-22 20:32:33,554: INFO: _internal: 127.0.0.1 - - [22/Nov/2025 20:32:33] "[32mPOST /register HTTP/1.1[0m" 302 -]
+[2025-11-22 20:32:33,561: INFO: _internal: 127.0.0.1 - - [22/Nov/2025 20:32:33] "GET /login HTTP/1.1" 200 -]
+[2025-11-22 20:32:59,663: INFO: _internal: 127.0.0.1 - - [22/Nov/2025 20:32:59] "[32mPOST /login HTTP/1.1[0m" 302 -]
+[2025-11-22 20:32:59,669: INFO: _internal: 127.0.0.1 - - [22/Nov/2025 20:32:59] "GET / HTTP/1.1" 200 -]
+[2025-11-22 20:33:07,567: INFO: _internal: 127.0.0.1 - - [22/Nov/2025 20:33:07] "GET /register HTTP/1.1" 200 -]
+[2025-11-22 20:33:29,181: INFO: _internal: 127.0.0.1 - - [22/Nov/2025 20:33:29] "[32mPOST /register HTTP/1.1[0m" 302 -]
+[2025-11-22 20:33:29,186: INFO: _internal: 127.0.0.1 - - [22/Nov/2025 20:33:29] "GET /login HTTP/1.1" 200 -]
+[2025-11-22 20:38:26,137: INFO: _internal: [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:8080
+ * Running on http://10.234.91.165:8080]
+[2025-11-22 20:38:26,137: INFO: _internal: [33mPress CTRL+C to quit[0m]
+[2025-11-22 20:39:05,252: INFO: _internal: 127.0.0.1 - - [22/Nov/2025 20:39:05] "GET / HTTP/1.1" 200 -]
+[2025-11-22 20:39:13,563: INFO: _internal: 127.0.0.1 - - [22/Nov/2025 20:39:13] "GET / HTTP/1.1" 200 -]
+[2025-11-22 20:39:45,155: INFO: _internal: 127.0.0.1 - - [22/Nov/2025 20:39:45] "GET / HTTP/1.1" 200 -]
+[2025-11-22 20:40:42,389: WARNING: saving_utils: Compiled the loaded model, but the compiled metrics have yet to be built. `model.compile_metrics` will be empty until you train or evaluate the model.]
+[2025-11-22 20:40:42,975: INFO: _internal: 127.0.0.1 - - [22/Nov/2025 20:40:42] "POST /predict HTTP/1.1" 200 -]
+[2025-11-22 20:40:46,529: INFO: _internal: 127.0.0.1 - - [22/Nov/2025 20:40:46] "GET /heatmap HTTP/1.1" 200 -]
+[2025-11-22 20:40:46,945: INFO: _internal: 127.0.0.1 - - [22/Nov/2025 20:40:46] "GET /static/original.jpg HTTP/1.1" 200 -]
+[2025-11-22 20:40:48,281: INFO: _internal: 127.0.0.1 - - [22/Nov/2025 20:40:48] "[32mGET /logout HTTP/1.1[0m" 302 -]
+[2025-11-22 20:40:48,298: INFO: _internal: 127.0.0.1 - - [22/Nov/2025 20:40:48] "GET /login HTTP/1.1" 200 -]
+[2025-11-22 20:42:28,465: INFO: _internal: 127.0.0.1 - - [22/Nov/2025 20:42:28] "GET /register HTTP/1.1" 200 -]

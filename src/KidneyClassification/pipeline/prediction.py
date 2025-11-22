@@ -12,87 +12,83 @@ class PredictionPipeline:
         self.filename = filename
         self.last_prediction = None
 
+        # ---------------------------
+        # 🔥 Load model only once
+        # ---------------------------
+        model_path = "model/model.h5"
+        if not hasattr(PredictionPipeline, "model"):
+            PredictionPipeline.model = load_model(model_path)
+
+        self.model = PredictionPipeline.model
+
 
     # ------------------------------------------------------------
-    # 🔥  Perfect Tumor-Detecting Grad-CAM (Latest Version)
+    # 🔥 PERFECT Grad-CAM
     # ------------------------------------------------------------
-    def generate_gradcam(self, model, layer_name="block5_conv3"):
-        """Generate a perfectly aligned Grad-CAM + background masking."""
+    def generate_gradcam(self, layer_name="block5_conv3"):
+        model = self.model
 
-        # Load original full-resolution image
+        # Load full image
         orig = cv2.imread(self.filename)
         orig = cv2.cvtColor(orig, cv2.COLOR_BGR2RGB)
-        orig_h, orig_w = orig.shape[:2]
+        oh, ow = orig.shape[:2]
 
-        # Resize to model input (224x224)
+        # Resize for model
         resized = cv2.resize(orig, (224, 224))
         x = np.expand_dims(resized / 255.0, axis=0)
 
         preds = model.predict(x)
-        pred_index = np.argmax(preds[0])
+        pred_idx = np.argmax(preds[0])
 
-        # Gradient model
         grad_model = tf.keras.models.Model(
-            [model.inputs], 
+            [model.inputs],
             [model.get_layer(layer_name).output, model.output]
         )
 
         with tf.GradientTape() as tape:
             conv_outputs, predictions = grad_model(x)
-            loss = predictions[:, pred_index]
+            loss = predictions[:, pred_idx]
 
         grads = tape.gradient(loss, conv_outputs)[0]
         weights = tf.reduce_mean(grads, axis=(0, 1))
 
         cam = np.zeros(conv_outputs[0].shape[0:2], dtype=np.float32)
 
-        # Weighted sum of channels
         for i, w in enumerate(weights):
             cam += w * conv_outputs[0][:, :, i]
 
-        # Normalize CAM
         cam = np.maximum(cam, 0)
         cam /= (cam.max() + 1e-8)
 
-        # Resize CAM to original image size
-        heatmap = cv2.resize(cam, (orig_w, orig_h))
+        heatmap = cv2.resize(cam, (ow, oh))
 
-        # ------------------------------------
-        # ⭐ REMOVE BLACK BACKGROUND PROPERLY
-        # ------------------------------------
+        # Mask background
         gray = cv2.cvtColor(orig, cv2.COLOR_RGB2GRAY)
         _, mask = cv2.threshold(gray, 10, 255, cv2.THRESH_BINARY)
-
-        heatmap = heatmap * (mask.astype("float32") / 255.0)
+        heatmap *= (mask.astype("float32") / 255.0)
         heatmap /= (heatmap.max() + 1e-8)
 
-        # Convert heatmap to color
         heatmap_color = cv2.applyColorMap(
             np.uint8(255 * heatmap), cv2.COLORMAP_JET
         )
         heatmap_color = cv2.cvtColor(heatmap_color, cv2.COLOR_BGR2RGB)
 
-        # Transparency control
         alpha = 0.45 if self.last_prediction == "Tumor" else 0.25
-
         blended = cv2.addWeighted(orig, 1 - alpha, heatmap_color, alpha, 0)
 
-        # Save result
+        # Save result safely
         os.makedirs("static", exist_ok=True)
-        gradcam_path = os.path.join("static", "gradcam_result.jpg")
-        cv2.imwrite(gradcam_path, cv2.cvtColor(blended, cv2.COLOR_RGB2BGR))
+        out_path = os.path.join("static", "gradcam_result.jpg")
+        cv2.imwrite(out_path, cv2.cvtColor(blended, cv2.COLOR_RGB2BGR))
 
-        return gradcam_path
+        return out_path
 
 
     # ------------------------------------------------------------
-    # 🔍 PREDICTION + AUTO-HANDLING NORMAL/TUMOR + REPORT DATA
+    # 📌 MAIN PREDICTION
     # ------------------------------------------------------------
     def predict(self):
-        """Predict Normal/Tumor + save heatmap + copy original image."""
-        
-        model_path = "model/model.h5"
-        model = load_model(model_path)
+        model = self.model
 
         # Preprocess
         img = image.load_img(self.filename, target_size=(224, 224))
@@ -101,45 +97,41 @@ class PredictionPipeline:
 
         preds = model.predict(img)
         confidence = float(np.max(preds)) * 100
-        pred_class = np.argmax(preds)
+        cls = np.argmax(preds)
 
-        prediction = "Tumor" if pred_class == 1 else "Normal"
+        prediction = "Tumor" if cls == 1 else "Normal"
         self.last_prediction = prediction
 
-        # --------------------------------------------------------
-        # SAVE ORIGINAL IMAGE IN static/
-        # --------------------------------------------------------
+        # Save original
         os.makedirs("static", exist_ok=True)
-        original_path = os.path.join("static", "original.jpg")
-        shutil.copy(self.filename, original_path)
+        orig_path = "static/original.jpg"
+        shutil.copy(self.filename, orig_path)
 
-        # --------------------------------------------------------
-        # ONLY generate heatmap if tumor
-        # --------------------------------------------------------
+        # Generate heatmap if tumor
         gradcam_path = None
-
         if prediction == "Tumor":
-            gradcam_path = self.generate_gradcam(model)
+            gradcam_path = self.generate_gradcam()
 
-        # --------------------------------------------------------
-        # 📝 NEW: Report Data (for PDF / HTML / User Info)
-        # --------------------------------------------------------
+        # EXTRA data for your report
         report_data = {
             "prediction": prediction,
             "confidence": f"{confidence:.2f}%",
-            "note": "Possible abnormality detected." if prediction == "Tumor" else "No suspicious signs detected.",
-            "recommendation": 
-                "Consult a radiologist for further evaluation." if prediction == "Tumor" 
-                else "Routine monitoring recommended.",
+            "note": (
+                "Possible kidney abnormality detected."
+                if prediction == "Tumor"
+                else "Kidney appears normal."
+            ),
+            "recommendation": (
+                "Consult a radiologist."
+                if prediction == "Tumor"
+                else "Routine monitoring recommended."
+            )
         }
 
-        # Final output
         return [{
             "prediction": prediction,
             "confidence": f"{confidence:.2f}%",
             "gradcam_path": gradcam_path,
-            "original_image_path": "static/original.jpg",
-
-            # NEW
+            "original_image_path": orig_path,
             "report": report_data
         }]
